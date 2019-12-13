@@ -1,0 +1,814 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Financial Fund</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="vendors/linericon/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="vendors/swiper/css/swiper.min.css">
+        <!-- main css -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <style type="text/css">
+            body{
+            overflow-x:     hidden;
+            user-select: none;
+            -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: moz-none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+
+        }
+        .custom-control-input:checked~.custom-control-label::before {
+            color: #fff;
+            background-color: #a7cb00;
+        }
+        
+        </style>
+	    
+	<!-- Anti-flicker snippet (recommended)  -->
+	<style>.async-hide { opacity: 0 !important} </style>
+	<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+	h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+	(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+	})(window,document.documentElement,'async-hide','dataLayer',4000,
+	{'UA-97845004-1':true});</script>
+	    
+	    <script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/apexcharts.min.js"></script>
+        <script type="text/javascript" src="js/data.js"></script>
+	    <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-97845004-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-97845004-1', { 'optimize_id': 'GTM-PNZNC27'});
+	</script>
+    </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="index.html"><h1>Financial Fund</h1></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav justify-content-center">
+								<li class="nav-item"><a class="nav-link" href="#home">Home</a></li> 
+								<li class="nav-item"><a class="nav-link" href="#performance">Performance</a></li> 
+								<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a> 
+								<li class="nav-item"><a class="nav-link" href="#plans">Plans</a></li><li class="nav-item"><a class="nav-link" href="#getstarted">Get Started</a></li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li class="nav-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li class="nav-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li class="nav-item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li class="nav-item"><a href="#"><i class="fa fa-behance"></i></a></li>
+								<li class="nav-item"><a href="#" class="search"><i class="lnr lnr-magnifier"></i></a></li>
+							</ul>
+						</div> 
+					</div>
+            	</nav>
+            </div>
+        </header>
+        <!--================Header Menu Area =================-->
+        
+        <!--================Home Banner Area =================-->
+        <section class="home_banner_area" id="home">
+            <div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="img/slider/slider-1.jpg">
+						<div class="slider_text_inner">
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-7">
+										<div class="slider_text">
+											<h2>We value money<br />as much as you do</h2>
+											<p>Sell at anytime from Saturday-Sunday 01:00-17:00 UTC.</p>
+											<a class="banner_btn" href="#">Get Started</a>
+											<a class="banner_btn2" href="#">View History</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+          <div class="swiper-slide"><img src="img/slider/slider-2.jpg">
+            <div class="slider_text_inner">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-7">
+                    <div class="slider_text">
+                      <h2>We are professional <br />risk manager</h2>
+                      <p>Choose your own plan from no risk at all to high risk.</p>
+                      <a class="banner_btn" href="#">Get Started</a>
+                      <a class="banner_btn2" href="#">View History</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+			</div>
+        </section>
+        <!--================End Home Banner Area =================-->
+        
+
+        <section class="project_know_area p-5" id="performance">
+            <div class="container" >
+                <div class="project_know_inner text-center">
+                    <h3>Performance</h3>
+                    <p>Compare our historical performance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--================Mission Area =================-->
+        <section class="mission_area">
+			<div class="row m0">
+				<div class="col-lg-6 p0">
+					<div class="left_img">
+                        <div class="col-lg-12 m-auto">
+                                <div id="chart"></div>
+                        </div>               
+                    </div>
+				</div>
+				<div class="col-lg-6 p0">
+					<div class="mission-text">
+						<table class="table col-lg-11">
+                            <thead>
+                                <tr>
+                                  <th scope="col"></th>
+                                  <th scope="col">Risk</th>
+                                  <th scope="col">Last</th>
+                                  <th scope="col">Last Change</th>
+                                  <th scope="col">Change %</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                  <th scope="row">$R1</th>
+                                  <td>No Risk, Fixed 0.18%</td>
+                                  <td>
+                                        <script type="text/javascript">
+                                            document.write(fixed[fixed.length-1]);
+                                        </script>
+                                  </td>
+
+                                  <td>
+                                        <script type="text/javascript">
+                                            var change = fixed[fixed.length-1]-fixed[fixed.length-2];
+                                            if(change>0){
+                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                            }
+                                            else if(change<0){
+                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                            }
+                                            document.write(Math.abs(change.toFixed(2)));
+                                        </script>
+                                  </td>
+                                  <td>
+                                        <script type="text/javascript">
+                                            var percent= change/fixed[fixed.length-2]*100;
+                                            if(percent>0){
+                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                            }
+                                            else if(percent<0){
+                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                            }
+                                            document.write(Math.abs(percent.toFixed(2)));
+                                        </script>%
+                                  </td>
+                                                  
+                                                </tr>
+                                                <tr>
+                                  <th scope="row">$R2</th>
+                                  <td>No Risk</td>
+                                  <td>
+                                        <script type="text/javascript">
+                                            document.write(ninetyfive[ninetyfive.length-1]);
+                                        </script>
+                                  </td>
+
+                                  <td>
+                                        <script type="text/javascript">
+                                            var change = ninetyfive[ninetyfive.length-1]-ninetyfive[ninetyfive.length-2];
+                                            if(change>0){
+                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                            }
+                                            else if(change<0){
+                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                            }
+                                            document.write(Math.abs(change.toFixed(2)));
+                                        </script>
+                                  </td>
+                                  <td>
+                                        <script type="text/javascript">
+                                            var percent= change/ninetyfive[ninetyfive.length-2]*100;
+                                            if(change>0){
+                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                            }
+                                            else if(change<0){
+                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                            }
+                                            document.write(Math.abs(percent.toFixed(2)));
+                                        </script>%
+                                  </td>
+                                  
+                                                </tr>
+                                                <tr>
+                                  <th scope="row">$R3</th>
+                                  <td>Low Risk</td>
+                                  <td>
+                                        <script type="text/javascript">
+                                            document.write(ninety[ninety.length-1]);
+                                        </script>
+                                  </td>
+
+                                  <td>
+                                        <script type="text/javascript">
+                                            var change = ninety[ninety.length-1]-ninety[ninety.length-2];
+                                            if(change>0){
+                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                            }
+                                            else if(change<0){
+                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                            }
+                                            document.write(Math.abs(change.toFixed(2)));
+                                        </script>
+                                  </td>
+                                  <td>
+                                        <script type="text/javascript">
+                                            var percent= change/ninety[ninety.length-2]*100;
+                                            if(change>0){
+                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                            }
+                                            else if(change<0){
+                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                            }
+                                            document.write(Math.abs(percent.toFixed(2)));
+                                        </script>%
+                                  </td>
+                                  
+                                                </tr>
+                                                <tr>
+                                  <th scope="row">$R4</th>
+                                  <td>Medium Risk</td>
+                                  <td>
+                                        <script type="text/javascript">
+                                            document.write(doublerisk[doublerisk.length-1]);
+                                        </script>
+                                  </td>
+
+                                  <td>
+                                        <script type="text/javascript">
+                                            var change = doublerisk[doublerisk.length-1]-doublerisk[doublerisk.length-2];
+                                            if(change>0){
+                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                            }
+                                            else if(change<0){
+                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                            }
+                                            document.write(Math.abs(change.toFixed(2)));
+                                        </script>
+                                  </td>
+                                  <td>
+                                        <script type="text/javascript">
+                                            var percent= change/doublerisk[doublerisk.length-2]*100;
+                                            if(change>0){
+                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                            }
+                                            else if(change<0){
+                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                            }
+                                            document.write(Math.abs(percent.toFixed(2)));
+                                        </script>%
+                                  </td>
+                                  
+                                                </tr>
+                                                <tr>
+                                  <th scope="row">$R5</th>
+                                  <td>High Risk</td>
+                                  <td>
+                                        <script type="text/javascript">
+                                            document.write(ultrarisk[ultrarisk.length-1]);
+                                        </script>
+                                  </td>
+
+                                  <td>
+                                        <script type="text/javascript">
+                                            var change = ultrarisk[ultrarisk.length-1]-ultrarisk[ultrarisk.length-2];
+                                            if(change>0){
+                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                            }
+                                            else if(change<0){
+                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                            }
+                                            document.write(Math.abs(change.toFixed(2)));
+                                        </script>
+                                  </td>
+                                  <td>
+                                        <script type="text/javascript">
+                                            var percent= change/ultrarisk[ultrarisk.length-2]*100;
+                                            if(change>0){
+                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                            }
+                                            else if(change<0){
+                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                            }
+                                            document.write(Math.abs(percent.toFixed(2)));
+                                        </script>%
+                                  </td>
+                  
+                                </tr>
+                            </tbody>
+                    </table>
+					</div>
+				</div>
+			</div>
+        </section>
+
+        <section class="project_area">
+            <div class="row m0">
+                <div class="col-lg-4 col-md-6 p0">
+                    <div class="project_item">
+                        <div id="bar"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 p0">
+                    <div class="project_item">
+                        <div id="bar1"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12 p0">
+                    <div class="project_item">
+                        <div id="bar2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--================End Mission Area =================-->
+        
+        <section class="project_know_area p-5" id="portfolio">
+            <div class="container">
+                <div class="project_know_inner text-center">
+                    <h3>Portfolio Allocation</h3>
+                    <p>Design your own portfolio.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="project_area">
+            <div class="row m0">
+                <div class="col-lg-4 col-md-6 p0">
+                    <div class="project_item">
+                        <div id="donut" class="p-5"></div>
+                        <div class="hover_text">
+                            <h4>Conservative</h4>
+                            <div class="cat">
+                                <a >Stable Growth</a>
+                            </div>
+                            <a class="main_btn" href="#getstarted">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p0">
+                    <div class="project_item">
+                        <div id="donut1" class="p-5"></div>
+                        <div class="hover_text">
+                            <h4>Aggresive</h4>
+                            <div class="cat">
+                                <a >Fast Growth</a>
+                            </div>
+                            <a class="main_btn" href="#getstarted">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 p0 m-auto">
+                    <div class="project_item">
+                        <div id="donut2" class="p-5"></div>
+                        <div class="hover_text">
+                            <h4>Recommended</h4>
+                            <div class="cat">
+                                <a >Balanced</a>
+                            </div>
+                            <a class="main_btn" href="#getstarted">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="project_know_area p-5" id="plans">
+            <div class="container">
+                <div class="project_know_inner text-center">
+                    <h3>Plans</h3>
+                    <p>Compare our plans.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--================Success Area =================-->
+        <section class="success_area">
+        	<div class="row m0">
+        		<div class="col-lg-6 p0">
+        			<div class="mission_text">
+						<h4>No Risk, Fixed 0.18%</h4>
+						<p>No risk investment with 0.2% fixed return/week.</p>
+                        <div class="row mt-3">
+                            <div class="col col-6">
+                                <h5>Risk</h5>
+                                <div id="round"></div>
+                            </div>
+                            <div class="col col-6">
+                                <h5>Return</h5>
+                                <div id="round1"></div>
+                            </div>
+                        </div>
+					</div>
+        		</div>
+        		<div class="col-lg-6">
+        			<div id="chart1" class="m-auto"></div>
+        		</div>
+        	</div>
+            <div class="row m0">
+                <div class="col-lg-6 p0">
+                    <div class="mission_text">
+                        <h4>No Risk</h4>
+                        <p>No risk investment with dynamic return. The maximum loss is limited to 0.</p>
+                        <div class="row mt-3">
+                            <div class="col col-6">
+                                <h5>Risk</h5>
+                                <div id="round2"></div>
+                            </div>
+                            <div class="col col-6">
+                                <h5>Return</h5>
+                                <div id="round3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div id="chart2" class="m-auto"></div>
+                </div>
+            </div>
+            <div class="row m0">
+                <div class="col-lg-6 p0">
+                    <div class="mission_text">
+                        <h4>Low Risk</h4>
+                        <p>Low risk investment with dynamic return.</p>
+                        <div class="row mt-3">
+                            <div class="col col-6">
+                                <h5>Risk</h5>
+                                <div id="round4"></div>
+                            </div>
+                            <div class="col col-6">
+                                <h5>Return</h5>
+                                <div id="round5"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div id="chart3" class="m-auto"></div>
+                </div>
+            </div>
+            <div class="row m0">
+                <div class="col-lg-6 p0">
+                    <div class="mission_text">
+                        <h4>Medium Risk</h4>
+                        <p>Medium risk investment with dynamic return.</p>
+                        <div class="row mt-3">
+                            <div class="col col-6">
+                                <h5>Risk</h5>
+                                <div id="round6"></div>
+                            </div>
+                            <div class="col col-6">
+                                <h5>Return</h5>
+                                <div id="round7"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div id="chart4" class="m-auto"></div>
+                </div>
+            </div>
+            <div class="row m0">
+                <div class="col-lg-6 p0">
+                    <div class="mission_text">
+                        <h4>High Risk</h4>
+                        <p>High risk investment with dynamic return.</p>
+                        <div class="row mt-3">
+                            <div class="col col-6">
+                                <h5>Risk</h5>
+                                <div id="round8"></div>
+                            </div>
+                            <div class="col col-6">
+                                <h5>Return</h5>
+                                <div id="round9"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div id="chart5" class="m-auto"></div>
+                </div>
+            </div>
+
+        </section>
+        <!--================End Success Area =================-->
+        
+        
+        <section class="project_know_area p-5" id="getstarted">
+            <div class="container">
+                <div class="project_know_inner text-center">
+                    <h3>Get Started</h3>
+                    <p>Saturday-Sunday 01:00-17:00 UTC</p>
+                </div>
+            </div>
+        </section>
+
+    <div class="col-lg-12 col-xl-7 m-auto pt-2 pb-5">
+    <div class="mt-3 text-center row">
+
+      <div class="col-lg-4 col-md-6 p-2">
+        <div class="card shadow-sm">
+          <div class="card-header text-light" style="background-color: #26A0FC;">
+            <h4 class="my-0 font-weight-normal">No Risk, Fixed 0.18%</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><script type="text/javascript">
+                document.write(fixed[fixed.length-1]);
+            </script> <small class="text-muted">/ Share</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>No Risk</li>
+              <li><script type="text/javascript">document.write(weekly[0])</script>% Fixed return/week</li>
+              <li><script type="text/javascript">document.write(monthly[1])</script>% Fixed return/month</li>
+              <li><script type="text/javascript">document.write(yearly[0]);</script>% Estimated return/year</li>
+              <li>Minimum 1,000 shares</li>
+              <li>Maximum 10,000 shares</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-light text-light" style="background-color: #26A0FC;">Get Started</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 p-2">
+        <div class="card shadow-sm">
+          <div class="card-header text-light" style="background-color: #5C6BC0">
+            <h4 class="my-0 font-weight-normal">No Risk</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><script type="text/javascript">
+                document.write(ninetyfive[ninetyfive.length-1]);
+            </script> <small class="text-muted">/ Share</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>No Risk</li>
+              <li><script type="text/javascript">document.write(weekly[1])</script>% Average return/week</li>
+              <li><script type="text/javascript">document.write(monthly[1])</script>% Average return/month</li>
+              <li><script type="text/javascript">document.write(yearly[1]);</script>% Estimated return/year</li>
+              <li>Minimum 1,000 shares</li>
+              <li>Maximum 10,000 shares</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-light text-light" style="background-color: #5C6BC0;">Get Started</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 p-2">
+        <div class="card shadow-sm">
+          <div class="card-header text-light" style="background-color: #29B6F6">
+            <h4 class="my-0 font-weight-normal">Low Risk</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><script type="text/javascript">
+                document.write(ninety[ninety.length-1]);
+            </script> <small class="text-muted">/ Share</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Low Risk</li>
+              <li><script type="text/javascript">document.write(weekly[2])</script>% Average return/week</li>
+              <li><script type="text/javascript">document.write(monthly[1])</script>% Average return/month</li>
+              <li><script type="text/javascript">document.write(yearly[2]);</script>% Estimated return/year</li>
+              <li>Minimum 1,000 shares</li>
+              <li>Maximum 10,000 shares</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-light text-light" style="background-color: #29B6F6;">Get Started</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 p-2 m-auto">
+        <div class="card shadow-sm">
+          <div class="card-header text-light" style="background-color: #67BB6A">
+            <h4 class="my-0 font-weight-normal">Medium Risk</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><script type="text/javascript">
+                document.write(doublerisk[doublerisk.length-1]);
+            </script> <small class="text-muted">/ Share</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Medium Risk</li>
+              <li><script type="text/javascript">document.write(weekly[3])</script>% Average return/week</li>
+              <li><script type="text/javascript">document.write(monthly[1])</script>% Average return/month</li>
+              <li><script type="text/javascript">document.write(yearly[3]);</script>% Estimated return/year</li>
+              <li>Minimum 1,000 shares</li>
+              <li>Maximum 10,000 shares</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-light text-light" style="background-color: #67BB6A;">Get Started</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 p-2 m-auto">
+        <div class="card shadow-sm">
+          <div class="card-header text-light" style="background-color: #FFA726">
+            <h4 class="my-0 font-weight-normal">High Risk</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><script type="text/javascript">
+                document.write(ultrarisk[ultrarisk.length-1]);
+            </script> <small class="text-muted">/ Share</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>High Risk</li>
+              <li><script type="text/javascript">document.write(weekly[4])</script>% Average return/week</li>
+              <li><script type="text/javascript">document.write(monthly[1])</script>% Average return/month</li>
+              <li><script type="text/javascript">document.write(yearly[4]);</script>% Estimated return/year</li>
+              <li>Minimum 1,000 shares</li>
+              <li>Maximum 10,000 shares</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-light text-light" style="background-color: #FFA726;">Get Started</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 p-2 m-auto text-left">
+        <div class="card shadow-sm">
+          <div class="card-header text-light" style="background-color: #a7cb00">
+            <h4 class="my-0 font-weight-normal">Portfolio</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title px-2"><span id="total">0.00</span><small class="text-muted"></small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+
+              <div class="row px-2 m-auto">
+                <div class="custom-control custom-switch col-6">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                  <label class="custom-control-label" for="customSwitch1">Fixed</label>
+                </div>
+                <div class="col-6">
+                  <input type="number" min="1000" max="10000" class="form-control form-control-sm" placeholder="Shares" id="fixedshare" disabled="true" value="1000">
+                </div>
+              </div>
+
+              <div class="row px-2 m-auto">
+                <div class="custom-control custom-switch col-6">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                  <label class="custom-control-label" for="customSwitch2">No Risk</label>
+                </div>
+                <div class="col-6">
+                  <input type="number"  min="1000" max="10000" class="form-control form-control-sm" placeholder="Shares" id="noriskshare" disabled="true" value="1000">
+                </div>
+              </div>
+
+              <div class="row px-2 m-auto">
+                <div class="custom-control custom-switch col-6">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                  <label class="custom-control-label" for="customSwitch3">Low Risk</label>
+                </div>
+                <div class="col-6">
+                  <input type="number"  min="1000" max="10000" class="form-control form-control-sm" placeholder="Shares" id="lowriskshare" disabled="true" value="1000">
+                </div>
+              </div>
+
+              <div class="row px-2 m-auto">
+                <div class="custom-control custom-switch col-6">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                  <label class="custom-control-label" for="customSwitch4">Medium Risk</label>
+                </div>
+                <div class="col-6">
+                  <input type="number"  min="1000" max="10000" class="form-control form-control-sm" placeholder="Shares" id="mediumriskshare" disabled="true" value="1000">
+                </div>
+              </div>
+
+              <div class="row px-2 m-auto">
+                <div class="custom-control custom-switch col-6">
+                  <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                  <label class="custom-control-label" for="customSwitch5">High Risk</label>
+                </div>
+                <div class="col-6">
+                  <input type="number"  min="1000" max="10000" class="form-control form-control-sm" placeholder="Shares" id="highriskshare" disabled="true" value="1000">
+                </div>
+              </div>
+
+              
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-light text-light" style="background-color: #a7cb00;">Get Started</button>
+          </div>
+        </div>
+      </div>
+
+
+  </div>
+  </div>
+
+        
+        <!--================ start footer Area  =================-->	
+        <footer class="footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4  col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">About Financial Fund</h6>
+                            <p>
+                                We have been trading currencies market for more than 2,500 hours. We manage our risk professionally.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">Navigation Links</h6>
+                            <div class="row">
+                                <div class="col-4">
+                                    <ul class="list">
+                                        <li><a href="#home">Home</a></li>
+                                        <li><a href="#performance">Performance</a></li>
+                                        <li><a href="#portfolio">Portfolio</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-4">
+                                    <ul class="list">
+                                        <li><a href="#plans">Plans</a></li>
+                                        <li><a href="#getstarted">Get Started</a></li>
+                                    </ul>
+                                </div>										
+                            </div>							
+                        </div>
+                    </div>							
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">Contact</h6>
+                            <p>Request detailed trading result.</p>		
+                            <div id="mc_embed_signup">
+                                <form target="_blank" method="get" class="subscribe_form relative">
+                                    <div class="input-group d-flex flex-row">
+                                        <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                        <button class="btn sub-btn"><span class="lnr lnr-location"></span></button>		
+                                    </div>									
+                                    <div class="mt-10 info"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>				
+                </div>
+                
+            </div>
+            <div class="border_line"></div>
+			<div class="container">
+				<div class="row footer-bottom d-flex justify-content-between align-items-center">
+                    <p class="col-lg-8 col-md-8 footer-text m-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+                    <div class="col-lg-4 col-md-4 footer-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </div>
+                </div>
+			</div>
+        </footer>
+		<!--================ End footer Area  =================-->
+        
+        <script src="js/port.js"></script>
+        <script type="text/javascript" src="js/chart.js"></script>
+        <script src="vendors/swiper/js/swiper.min.js"></script>
+        <script src="js/theme.js"></script>
+        
+    </body>
+</html>
