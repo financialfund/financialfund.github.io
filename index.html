@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="css/responsive.css">
         <style type="text/css">
             body{
-            overflow:     hidden;
+            overflow-x:     hidden;
             user-select: none;
             -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -24,22 +24,30 @@
       -ms-user-select: none;
        -o-user-select: none;
           user-select: none;
-
+          opacity: 0;
         }
         .custom-control-input:checked~.custom-control-label::before {
             color: #fff;
             background-color: #a7cb00;
         }
-
-
-        
         </style>
       <script src="js/jquery-3.2.1.min.js"></script>
 	       <script src="js/apexcharts.min.js"></script>
         <script type="text/javascript" src="js/data.js"></script>
+        <script type="text/javascript">
+          window.onload = function() {
+          $( "body" ).animate({
+            opacity: 1
+          }, 1000, function() {
+            // Animation complete.
+          });
+          
+        };
+        </script>
       </head>
 
-    <body style="opacity: 0;">
+    <body>
+
         <!--================Header Menu Area =================-->
         <header class="header_area">
             <div class="main_menu">
