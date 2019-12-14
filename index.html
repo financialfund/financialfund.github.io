@@ -35,7 +35,14 @@
 	    
       <script src="js/jquery-3.2.1.min.js"></script>
       <script type="text/javascript">
-        window.onload = function() {setTimeout(function(){document.body.style.opacity="100";},500);};
+        window.onload = function() {
+
+          $( "body" ).animate({
+            opacity: 1
+          }, 500, function() {
+            // Animation complete.
+          });
+        };
       </script>
 	       
          <script type="text/javascript" src="js/jquery.nicescroll.min.js">
