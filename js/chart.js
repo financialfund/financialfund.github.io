@@ -1,7 +1,7 @@
 var options = {
     chart: {
         height: 500,
-        type: 'area',
+        type: 'line',
         toolbar:{
             show: false,
         }
@@ -9,43 +9,48 @@ var options = {
     dataLabels: {
         enabled: false
     },
-    stroke: {
-        curve: 'smooth'
-    },
-    series: [{
-        name: 'No Risk, Fixed 0.18%',
-        data: fixed
-    }, {
-        name: 'No Risk',
-        data: ninetyfive
-    },{
-        name: 'Low Risk',
-        data: ninety
-    },{
-        name: 'Medium Risk',
-        data: doublerisk
-    },{
+    series: [
+    {
         name: 'High Risk',
         data: ultrarisk
     }
+    ,{
+        name: 'Medium Risk',
+        data: doublerisk
+    }
+    ,{
+        name: 'Low Risk',
+        data: ninety
+    }
+    ,{
+        name: 'No Risk',
+        data: ninetyfive
+    },
+    {
+        name: 'No Risk, Fixed 0.18%',
+        data: fixed
+    }
     ],
-
     xaxis: {
         type: 'text',
         categories: date,                
     },
+    yaxis:{
+        min:Math.min(...ultrarisk),
+        max:Math.max(...ultrarisk),
+        forceNiceScale: true,
+    },
     tooltip: {
-        inverseOrder: true,
+        enabled: true,
     },
     legend:{
     	position: 'bottom',
     },
     stroke:{
-    	width: 2,
+        curve: 'smooth',
+    	width: 3,
     },
-    theme: { 
-          palette: 'palette2', 
-    }
+    colors:['#FFA726','#FAD53F','#67BB6A','#29B6F6','#5C6BC0']
 }
 var compare = new ApexCharts(document.querySelector("#chart"),options);
 
