@@ -6,7 +6,7 @@ var options = {
             show: false,
         },
         animations:{
-            enabled: false,
+            enabled: true,
         }
     },
     dataLabels: {
@@ -66,7 +66,7 @@ options = {
             show: false,
         },
         animations:{
-            enabled: false,
+            enabled: true,
         }
     },
     dataLabels: {
@@ -107,7 +107,7 @@ options = {
         }
         ,
         animations:{
-            enabled: false,
+            enabled: true,
         }
         ,
         height:300,
@@ -148,7 +148,7 @@ options = {
             show: false,
         },
         animations:{
-            enabled: false,
+            enabled: true,
         }
         ,
         height:300,
@@ -190,7 +190,7 @@ options = {
             show: false,
         },
         animations:{
-            enabled: false,
+            enabled: true,
         }
         ,
         height:300,
@@ -231,7 +231,7 @@ options = {
             show: false,
         },
         animations:{
-            enabled: false,
+            enabled: true,
         }
         ,
         height:300,
@@ -274,7 +274,7 @@ chart: {
     type: 'radialBar',
     offsetY: -20,
         animations:{
-            enabled: false,
+            enabled: true,
         }
 },
 plotOptions: {
@@ -323,7 +323,7 @@ options = {
         type: 'radialBar',
         offsetY: -20,
         animations:{
-            enabled: false,
+            enabled: true,
         }
     },
     plotOptions: {
@@ -382,7 +382,7 @@ var options = {
         type: 'radialBar',
         offsetY: -20,
         animations:{
-            enabled: false,
+            enabled: true,
         }
     },
     plotOptions: {
@@ -440,7 +440,7 @@ var options = {
         type: 'radialBar',
         offsetY: -20,
         animations:{
-            enabled: false,
+            enabled: true,
         }
     },
     plotOptions: {
@@ -498,7 +498,7 @@ var options = {
         type: 'radialBar',
         offsetY: -20,
         animations:{
-            enabled: false,
+            enabled: true,
         }
     },
     plotOptions: {
@@ -555,7 +555,7 @@ var options = {
         type: 'radialBar',
         offsetY: -20,
         animations:{
-            enabled: false,
+            enabled: true,
         }
     },
     plotOptions: {
@@ -612,7 +612,7 @@ var options = {
         type: 'radialBar',
         offsetY: -20,
         animations:{
-            enabled: false,
+            enabled: true,
         }
     },
     plotOptions: {
@@ -669,7 +669,7 @@ var options = {
         type: 'radialBar',
         offsetY: -20,
         animations:{
-            enabled: false,
+            enabled: true,
         }
     },
     plotOptions: {
@@ -726,7 +726,7 @@ var options = {
         type: 'radialBar',
         offsetY: -20,
         animations:{
-            enabled: false,
+            enabled: true,
         }
     },
     plotOptions: {
@@ -787,7 +787,7 @@ var options = {
     height: 380,
     type: "donut",
         animations:{
-            enabled: false,
+            enabled: true,
         }
   },
   series: [30, 40, 30],
@@ -815,7 +815,7 @@ var options = {
     height: 380,
     type: "donut",
         animations:{
-            enabled: false,
+            enabled: true,
         }
   },
   series: [15, 20, 35, 20, 10],
@@ -841,7 +841,7 @@ var options = {
     height: 380,
     type: "donut",
         animations:{
-            enabled: false,
+            enabled: true,
         }
   },
   series: [20, 25, 35, 10, 10],
@@ -877,7 +877,7 @@ var options = {
             show:false
         },
         animations:{
-            enabled: false,
+            enabled: true,
         }
     },
     plotOptions: {
@@ -945,7 +945,7 @@ var options = {
             show:false
         },
         animations:{
-            enabled: false,
+            enabled: true,
         }
     },
     plotOptions: {
@@ -1013,7 +1013,7 @@ var options = {
             show:false
         },
         animations:{
-            enabled: false,
+            enabled: true,
         }
     },
     plotOptions: {
