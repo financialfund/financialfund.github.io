@@ -33,17 +33,21 @@
         
         </style>
 	    
-	       <script src="js/jquery-3.2.1.min.js"></script>
+      <script src="js/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript">
+        window.onload = function() {setTimeout(function(){document.body.style.opacity="100";},500);};
+      </script>
+	       
          <script type="text/javascript" src="js/jquery.nicescroll.min.js">
-	    $(document).ready(function() { 
-		    $("html").niceScroll();
-		  }
-		);
-	    </script>
+	       </script>
 	       <script src="js/apexcharts.min.js"></script>
         <script type="text/javascript" src="js/data.js"></script>
-    <body>
-        
+
+      </head>
+
+    <body style="opacity: 0;">
+        <script type="text/javascript">$("html").niceScroll();
+      </script>
         <!--================Header Menu Area =================-->
         <header class="header_area">
             <div class="main_menu">
