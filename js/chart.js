@@ -4,6 +4,9 @@ var options = {
         type: 'line',
         toolbar:{
             show: false,
+        },
+        animations:{
+            enabled: false,
         }
     },
     dataLabels: {
@@ -61,6 +64,9 @@ options = {
         type: 'area',
         toolbar:{
             show: false,
+        },
+        animations:{
+            enabled: false,
         }
     },
     dataLabels: {
@@ -100,6 +106,10 @@ options = {
             show: false,
         }
         ,
+        animations:{
+            enabled: false,
+        }
+        ,
         height:300,
     },
     dataLabels: {
@@ -136,6 +146,9 @@ options = {
         type: 'area',
         toolbar:{
             show: false,
+        },
+        animations:{
+            enabled: false,
         }
         ,
         height:300,
@@ -175,6 +188,9 @@ options = {
         type: 'area',
         toolbar:{
             show: false,
+        },
+        animations:{
+            enabled: false,
         }
         ,
         height:300,
@@ -213,6 +229,9 @@ options = {
         type: 'area',
         toolbar:{
             show: false,
+        },
+        animations:{
+            enabled: false,
         }
         ,
         height:300,
@@ -253,7 +272,10 @@ var c = ['#a7cb00'];
 options = {
 chart: {
     type: 'radialBar',
-    offsetY: -20
+    offsetY: -20,
+        animations:{
+            enabled: false,
+        }
 },
 plotOptions: {
     radialBar: {
@@ -299,7 +321,10 @@ var round2 = new ApexCharts(
 options = {
     chart: {
         type: 'radialBar',
-        offsetY: -20
+        offsetY: -20,
+        animations:{
+            enabled: false,
+        }
     },
     plotOptions: {
         radialBar: {
@@ -355,7 +380,10 @@ var round1 = new ApexCharts(
 var options = {
     chart: {
         type: 'radialBar',
-        offsetY: -20
+        offsetY: -20,
+        animations:{
+            enabled: false,
+        }
     },
     plotOptions: {
         radialBar: {
@@ -410,7 +438,10 @@ var round3 = new ApexCharts(
 var options = {
     chart: {
         type: 'radialBar',
-        offsetY: -20
+        offsetY: -20,
+        animations:{
+            enabled: false,
+        }
     },
     plotOptions: {
         radialBar: {
@@ -465,7 +496,10 @@ var round4 = new ApexCharts(
 var options = {
     chart: {
         type: 'radialBar',
-        offsetY: -20
+        offsetY: -20,
+        animations:{
+            enabled: false,
+        }
     },
     plotOptions: {
         radialBar: {
@@ -519,7 +553,10 @@ var round5 = new ApexCharts(
 var options = {
     chart: {
         type: 'radialBar',
-        offsetY: -20
+        offsetY: -20,
+        animations:{
+            enabled: false,
+        }
     },
     plotOptions: {
         radialBar: {
@@ -573,7 +610,10 @@ var round6 = new ApexCharts(
 var options = {
     chart: {
         type: 'radialBar',
-        offsetY: -20
+        offsetY: -20,
+        animations:{
+            enabled: false,
+        }
     },
     plotOptions: {
         radialBar: {
@@ -627,7 +667,10 @@ var round7 = new ApexCharts(
 var options = {
     chart: {
         type: 'radialBar',
-        offsetY: -20
+        offsetY: -20,
+        animations:{
+            enabled: false,
+        }
     },
     plotOptions: {
         radialBar: {
@@ -681,7 +724,10 @@ var round8 = new ApexCharts(
 var options = {
     chart: {
         type: 'radialBar',
-        offsetY: -20
+        offsetY: -20,
+        animations:{
+            enabled: false,
+        }
     },
     plotOptions: {
         radialBar: {
@@ -740,6 +786,9 @@ var options = {
   chart: {
     height: 380,
     type: "donut",
+        animations:{
+            enabled: false,
+        }
   },
   series: [30, 40, 30],
   legend: {
@@ -765,6 +814,9 @@ var options = {
   chart: {
     height: 380,
     type: "donut",
+        animations:{
+            enabled: false,
+        }
   },
   series: [15, 20, 35, 20, 10],
   legend: {
@@ -788,6 +840,9 @@ var options = {
   chart: {
     height: 380,
     type: "donut",
+        animations:{
+            enabled: false,
+        }
   },
   series: [20, 25, 35, 10, 10],
   legend: {
@@ -820,6 +875,9 @@ var options = {
         type: 'bar',
         toolbar:{
             show:false
+        },
+        animations:{
+            enabled: false,
         }
     },
     plotOptions: {
@@ -885,6 +943,9 @@ var options = {
         type: 'bar',
         toolbar:{
             show:false
+        },
+        animations:{
+            enabled: false,
         }
     },
     plotOptions: {
@@ -950,6 +1011,9 @@ var options = {
         type: 'bar',
         toolbar:{
             show:false
+        },
+        animations:{
+            enabled: false,
         }
     },
     plotOptions: {
