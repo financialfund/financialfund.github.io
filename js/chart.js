@@ -44,7 +44,9 @@ var options = {
         enabled: true,
     },
     legend:{
+        inverseOrder: true,
     	position: 'bottom',
+
     },
     stroke:{
         curve: 'smooth',
