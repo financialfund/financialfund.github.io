@@ -34,7 +34,12 @@
         </style>
 	    
 	       <script src="js/jquery-3.2.1.min.js"></script>
-         <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+         <script type="text/javascript" src="js/jquery.nicescroll.min.js">
+	    $(document).ready(function() { 
+		    $("html").niceScroll();
+		  }
+		);
+	    </script>
 	       <script src="js/apexcharts.min.js"></script>
         <script type="text/javascript" src="js/data.js"></script>
     <body>
