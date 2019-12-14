@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  $("html").niceScroll();
           // Add smooth scrolling to all links
           $("a").on('click', function(event) {
 
