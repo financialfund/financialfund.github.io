@@ -37,7 +37,6 @@ var options = {
     },
     yaxis:{
         min:Math.min(...ultrarisk),
-        max:Math.max(...ultrarisk),
         forceNiceScale: true,
     },
     tooltip: {
