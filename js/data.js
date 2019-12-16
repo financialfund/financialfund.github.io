@@ -7,7 +7,7 @@
 	1254.76, 			1330.57]}';
 	var myObj = JSON.parse(myJSON);
 	
-    var management = 18592852.95;
+    var management = 18639292.41;
 
 	var date = myObj["date"];
 	var overall = myObj["balance"];
