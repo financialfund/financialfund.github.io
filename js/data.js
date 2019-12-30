@@ -37,8 +37,8 @@
 	fund = 1000;
 	var doublerisk = [1000];
 	for (var i = 0; i < date.length-1; i++) {
-		var gain = (overall[i+1]-overall[i])*0.225;
-		if(gain<0) gain*=4.45;
+		var gain = (overall[i+1]-overall[i])*0.22;
+		if(gain<0) gain*=4.55;
 		fund += gain;
 		doublerisk.push(fund.toFixed(2));
 	}
