@@ -30,7 +30,7 @@ var options = {
         data: ninetyfive
     },
     {
-        name: 'No Risk, Fixed 0.18%',
+        name: 'No Risk, Fixed 0.15%',
         data: fixed
     }
     ],
@@ -76,7 +76,7 @@ options = {
         curve: 'smooth'
     },
     series: [{
-        name: 'No Risk, Fixed 0.18%',
+        name: 'No Risk, Fixed 0.15%',
         data: fixed
     }
     ],
@@ -780,7 +780,7 @@ var round9 = new ApexCharts(
 
 
 
-var type = ['No Risk, Fixed 0.18%', 'No Risk', 'Low Risk'];
+var type = ['No Risk, Fixed 0.15%', 'No Risk', 'Low Risk'];
 
 var options = {
   chart: {
@@ -808,7 +808,7 @@ var options = {
 var donut = new ApexCharts(document.querySelector("#donut"), options);
 
     
-type = ['No Risk, Fixed 0.18%', 'No Risk', 'Low Risk', 'Medium Risk', 'High Risk'];
+type = ['No Risk, Fixed 0.15%', 'No Risk', 'Low Risk', 'Medium Risk', 'High Risk'];
 
 var options = {
   chart: {
