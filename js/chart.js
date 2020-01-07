@@ -47,7 +47,7 @@ var options = {
     },
     legend:{
         inverseOrder: true,
-    	position: 'bottom',
+    	position: 'top',
 
     },
     stroke:{
