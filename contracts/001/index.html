@@ -1,0 +1,412 @@
+<script type="text/javascript">
+
+	var obj = {
+		"Fixed":{"Entry": 0, "Units": 0, "Date": "", "Bonus": 0},
+		"No Risk":{"Entry": 1022.23, "Units": 0, "Date": "January, 5 2020", "Bonus": 0},
+		"Low Risk": {"Entry": 1034.8, "Units": 10000, "Date": "January, 4 2020", "Bonus": 0},
+		"Medium Risk": {"Entry": 0, "Units": 0, "Date": "", "Bonus": 0},
+		"High Risk": {"Entry": 0, "Units": 0, "Date": "", "Bonus": 0}
+	};
+
+</script>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>001</title>
+	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <link rel="stylesheet" href="../../vendors/linericon/style.css">
+        <link rel="stylesheet" href="../../css/font-awesome.min.css">
+        <link rel="stylesheet" href="../../vendors/swiper/css/swiper.min.css">
+        <!-- main css -->
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/responsive.css">
+        <style type="text/css">
+            body{
+            overflow-x: hidden;
+            user-select: none;
+            -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: moz-none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+          opacity: 0;
+        }
+
+        </style>
+
+        <script src="../../js/jquery-3.2.1.min.js"></script>
+	    <script src="../../js/apexcharts.min.js"></script>
+        <script type="text/javascript" src="../../js/data.js"></script>
+        <script type="text/javascript">
+          window.onload = function() {
+          $( "body" ).animate({
+            opacity: 1
+          }, 1000, function() {
+            // Animation complete.
+          });
+          
+        };
+
+        function formatNumber(num) {
+		  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+		}
+        </script>
+</head>
+<body>
+
+<div class="container" id="container">
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="pt-4 pl-4 text-dark">Financial Fund</h1>
+		<h4 class=" pl-4 text-dark">Contract <script type="text/javascript">document.write(document.title);</script></h4>
+		<a onclick="printDiv()" href="#" class="pl-4 pb-4">print</a>
+		<hr>
+	</div>
+</div>
+
+<div class="row p-2 mb-4">
+	<div class="card-group col-12">
+	  <div class="card text-center">
+	    <div class="card-body">
+	      <h3 class="card-title" style="opacity: 0.8">Total Return</h3>
+	      <h1 class="card-text" style="font-size: 48px; font-weight: 100;" id="return"></h1>
+	    </div>
+	  </div>
+
+	  <div class="card text-center">
+	    <div class="card-body">
+	      <h3 class="card-title" style="opacity: 0.8">Total Invested</h3>
+	      <h1 class="card-text" style="font-size: 48px; font-weight: 100;" id="invested"></h1>
+	    </div>
+	  </div>
+
+	<div class="card text-center">
+	    <div class="card-body">
+	      <h3 class="card-title" style="opacity: 0.8">Net P/L</h3>
+	      <h1 class="card-text" style="font-size: 48px; font-weight: 100;" id="pl"></h1>
+	    </div>
+	  </div>
+	  
+</div>
+</div>
+
+
+<div class="row">
+	<div id="chart1" class="col-12"></div>
+</div>
+
+<div class="row">
+	<div class="col-12 table-responsive">
+		<table class="table">
+		  <thead class="thead-dark">
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">Date</th>
+		      <th scope="col">Risk</th>
+		      
+		      <th scope="col">Entry</th>
+		      <th scope="col">Value</th>
+		      <th scope="col">Units</th>
+		      <th scope="col">P/L</th>
+		      <th scope="col">P/L(%)</th>
+		      <th scope="col">Commission</th>
+		      <th scope="col">Invested</th>
+		      <th scope="col">Current</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	<script type="text/javascript">
+		  		var shares = []
+
+		  		var dict = {"Fixed":fixed, "No Risk":ninetyfive, "Low Risk":ninety, "Medium Risk":doublerisk, "High Risk":ultrarisk};
+
+		  		for (var i in obj) {
+		  			if(obj[i]["Units"]>0) shares.push(i);
+		  		}
+
+		  		var _units = 0;
+		  		var _entry = 0;
+		  		var _current = 0;
+		  		var _profit = 0;
+		  		var _bonus = 0;
+		  		var _invested = 0;
+		  		var _total =0
+
+		  		for (var i = 0; i < shares.length; i++) {
+		  			var current = dict[shares[i]][dict[shares[i]].length-1];
+		  			var entry = obj[shares[i]]["Entry"];
+
+		  			var bonus = obj[shares[i]]["Bonus"];
+		  			_bonus+=bonus;
+
+		  			var units = obj[shares[i]]["Units"];
+		  			_units+=units;
+
+		  			var profit = (current*units)-(entry*units);
+		  			_profit+=profit;
+
+		  			var percent = current/entry*100-100;
+
+		  			_entry += entry*units;
+		  			_current += current*units;
+
+		  			var total = current*units+bonus;
+		  			_total+=total;
+
+		  			var Invested = entry*units;
+		  			_invested+=Invested;
+
+		  			document.write("<tr>");
+		  			document.write("<th scope='row'>"+(i+1)+"</th>");
+
+		  			document.write("<td>"+obj[shares[i]]["Date"]+"</td>");
+		  			document.write("<td>"+shares[i]+"</td>");
+		  			document.write("<td>"+entry+"</td>");
+		  			document.write("<td>"+current+"</td>");
+		  			document.write("<td>"+formatNumber(units)+"</td>");
+
+		  			if (profit>0) {
+		  				document.write("<td style='color: #2ec551'>");
+		  			}
+		  			else{
+		  				document.write("<td style='color: red'>");
+		  			}
+		  			document.write(formatNumber(Math.abs(profit).toFixed(2))+"</td>");
+
+		  			if (percent>0) {
+		  				document.write("<td style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
+		  			}
+		  			else{
+		  				document.write("<td style='color: red'> <i class='fa fa-fw fa-arrow-down'></i>");
+		  			}
+		  			document.write(Math.abs(percent.toFixed(2))+"%</td>");
+
+		  			document.write("<td>"+bonus.toFixed(2)+"</td>");
+
+		  			document.write("<td>"+formatNumber(Invested.toFixed(2))+"</td>");
+		  			document.write("<td>"+formatNumber(total.toFixed(2))+"</td>");
+
+		  			document.write("</tr>");
+
+		  			
+		  		}
+
+		  	</script>
+
+		    <tr>
+		    	<th scope="row" colspan="5" style="font-size: 20px">Total: </th>
+		    	<script>
+		    		var gain = ((_current/_entry*100-100)).toFixed(2);
+		    		document.write("<th>"+formatNumber(_units)+"</th>");
+
+		    		if (profit>0) {
+		  				document.write("<th style='color: #2ec551'>");
+		  				$("#pl").html("<span style='color: #2ec551'>"+formatNumber(Math.abs(_profit).toFixed(2))+"</span>");
+		  			}
+		  			else{
+		  				document.write("<th style='color: red'>");
+		  				$("#pl").html("<span style='color: red'>"+formatNumber(Math.abs(_profit).toFixed(2))+"</span>");
+		  			}
+		    		document.write(formatNumber(Math.abs(_profit).toFixed(2))+"</th>");
+		    		
+		    		if (gain>0) {
+		  				document.write("<th style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
+		  				$("#return").html("<span style='color: #2ec551'>"+Math.abs(gain).toFixed(2)+"%</span>");
+		  			}
+		  			else{
+		  				document.write("<th style='color: red'> <i class='fa fa-fw fa-arrow-down'></i>");
+		  				$("#return").html("<span style='color: red'>"+Math.abs(gain).toFixed(2)+"%</span>");
+		  			}
+		    		document.write(Math.abs(gain)+"%</th>");
+		    		document.write("<th>"+formatNumber(_bonus.toFixed(2))+"</th>");
+		    		document.write("<th>"+formatNumber(_invested.toFixed(2))+"</th>");
+		    		document.write("<th>"+formatNumber(_total.toFixed(2))+"</th>");
+
+		    		$("#invested").text(formatNumber(_invested.toFixed(2)));
+
+		    		
+		    	</script>
+
+
+		    	
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row">
+	<div id="chart" class="col-12"></div>
+</div>
+
+
+<script type="text/javascript">
+		    		
+function printDiv() {
+     var printContents = document.getElementById("container").innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>
+
+<script type="text/javascript">
+	var series = [];
+	var sum = [];
+	var data = {};
+	var equity = [];
+
+
+	//shares = name
+	for (var i = 0; i < shares.length; i++) {
+
+		data["name"] = shares[i];
+		var buy = obj[shares[i]]["Entry"];
+		var qty = obj[shares[i]]["Units"];
+		var a = dict[shares[i]];
+
+		for (var j = 0; j < a.length; j++) {
+			if(buy<=a[j]){
+				equity.push((a[j]*qty).toFixed(2));
+			}
+		}
+
+		for (var k = 0; k < equity.length; k++) {
+			if(typeof sum[k] === 'undefined') {
+				sum[k] = parseFloat(equity[k]);
+			}
+			else{
+				sum[k] += parseFloat(equity[k]);
+			}
+		}
+
+		data["data"] = equity;
+		series.push(data);
+
+		data = {};
+		equity = [];
+	}
+	
+	// data["name"] = "Total";
+	// data["data"] = sum;
+	// series.push(data);
+	
+	
+
+	var options = {
+	title: {
+		text: "Detail",
+		margin: 0,
+		align: 'center',
+		style: {
+	      fontSize:  '48px'
+	    }
+	},
+    chart: {
+        height: 500,
+        type: 'area',
+        toolbar:{
+            show: false,
+        },
+        animations:{
+            enabled: true,
+        }
+    },
+    dataLabels: {
+        enabled: false
+    },
+    series: series
+    ,
+    xaxis: {
+        type: 'text',               
+    },
+    yaxis: {
+	  labels: {
+	    formatter: function (value) {
+	      return formatNumber(value);
+	    }
+	  },
+	},
+    tooltip: {
+    	inverseOrder: true,
+        enabled: true,
+    },
+    legend:{
+    	position: 'bottom',
+    },
+    stroke:{
+        curve: 'smooth',
+    	width: 1,
+    },
+   
+}
+var compare = new ApexCharts(document.querySelector("#chart"),options);
+
+series = [];
+data["name"] = "Total";
+data["data"] = sum;
+series.push(data);
+
+var options = {
+    chart: {
+        height: 350,
+        type: 'area',
+        toolbar:{
+            show: false,
+        },
+        animations:{
+            enabled: true,
+        }
+    },
+    dataLabels: {
+        enabled: false
+    },
+    series: series
+    ,
+    xaxis: {
+    	labels: {
+    		show: false,
+    	},
+        type: 'text',               
+    },
+    yaxis: {
+	  labels: {
+	    formatter: function (value) {
+	      return formatNumber(value);
+	    }
+	  },
+	},
+    tooltip: {
+    	inverseOrder: true,
+        enabled: true,
+    },
+    legend:{
+    	position: 'bottom',
+    },
+    stroke:{
+        curve: 'smooth',
+    	width: 1,
+    },
+    colors:['#2ec551']
+   
+}
+
+var all = new ApexCharts(document.querySelector("#chart1"),options);
+//compare.render();
+all.render();
+
+</script>
+</div>
+</body>
+</html>

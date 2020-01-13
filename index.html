@@ -66,8 +66,10 @@
 							<ul class="nav navbar-nav menu_nav justify-content-center">
 								<li class="nav-item"><a class="nav-link" href="#home">Home</a></li> 
 								<li class="nav-item"><a class="nav-link" href="#performance">Performance</a></li> 
-								<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a> 
-								<li class="nav-item"><a class="nav-link" href="#plans">Plans</a></li><li class="nav-item"><a class="nav-link" href="#getstarted">Get Started</a></li>
+								<li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a> </li>
+								<li class="nav-item"><a class="nav-link" href="#plans">Plans</a></li>
+                <li class="nav-item"><a class="nav-link" href="#getstarted">Get Started</a></li>
+                <li class="nav-item"><a class="nav-link" href="#timeline">Timeline</a></li>
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 								<li class="nav-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -159,11 +161,10 @@
                     </div>
 				</div>
 				<div class="col-lg-6 p0">
-					<div class="mission-text">
+					<div class="mission-text table-responsive">
 						<table class="table col-lg-11">
                             <thead>
                                 <tr>
-                                  <th scope="col"></th>
                                   <th scope="col">Risk</th>
                                   <th scope="col">Last</th>
                                   <th scope="col">Last Change</th>
@@ -172,7 +173,6 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                  <th scope="row">$R1</th>
                                   <td>No Risk, Fixed 0.15%</td>
                                   <td>
                                         <script type="text/javascript">
@@ -184,30 +184,31 @@
                                         <script type="text/javascript">
                                             var change = fixed[fixed.length-1]-fixed[fixed.length-2];
                                             if(change>0){
-                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                                document.write("<span style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
                                             }
                                             else if(change<0){
-                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                                document.write("<span style='color: red'> <i class='fa fa-fw fa-arrow-down'></i>");
                                             }
                                             document.write(Math.abs(change.toFixed(2)));
+                                            document.write("</span>");
                                         </script>
                                   </td>
                                   <td>
                                         <script type="text/javascript">
                                             var percent= change/fixed[fixed.length-2]*100;
-                                            if(percent>0){
-                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                            if(change>0){
+                                                document.write("<span style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
                                             }
-                                            else if(percent<0){
-                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                            else if(change<0){
+                                                document.write("<span style='color: red'> <i class='fa fa-fw fa-arrow-down'></i>");
                                             }
                                             document.write(Math.abs(percent.toFixed(2)));
-                                        </script>%
+                                            document.write("%</span>");
+                                        </script>
                                   </td>
                                                   
                                                 </tr>
                                                 <tr>
-                                  <th scope="row">$R2</th>
                                   <td>No Risk</td>
                                   <td>
                                         <script type="text/javascript">
@@ -219,30 +220,31 @@
                                         <script type="text/javascript">
                                             var change = ninetyfive[ninetyfive.length-1]-ninetyfive[ninetyfive.length-2];
                                             if(change>0){
-                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                                document.write("<span style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
                                             }
                                             else if(change<0){
-                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                                document.write("<span style='color: red'> <i class='fa fa-fw fa-arrow-down'></i>");
                                             }
                                             document.write(Math.abs(change.toFixed(2)));
+                                            document.write("</span>");
                                         </script>
                                   </td>
                                   <td>
                                         <script type="text/javascript">
                                             var percent= change/ninetyfive[ninetyfive.length-2]*100;
                                             if(change>0){
-                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                                document.write("<span style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
                                             }
                                             else if(change<0){
-                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                                document.write("<span style='color: red'> <i class='fa fa-fw fa-arrow-down'></i>");
                                             }
                                             document.write(Math.abs(percent.toFixed(2)));
-                                        </script>%
+                                            document.write("%</span>");
+                                        </script>
                                   </td>
                                   
                                                 </tr>
                                                 <tr>
-                                  <th scope="row">$R3</th>
                                   <td>Low Risk</td>
                                   <td>
                                         <script type="text/javascript">
@@ -254,30 +256,31 @@
                                         <script type="text/javascript">
                                             var change = ninety[ninety.length-1]-ninety[ninety.length-2];
                                             if(change>0){
-                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                                document.write("<span style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
                                             }
                                             else if(change<0){
-                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                                document.write("<span style='color: red'> <i class='fa fa-fw fa-arrow-down'></i>");
                                             }
                                             document.write(Math.abs(change.toFixed(2)));
+                                            document.write("</span>");
                                         </script>
                                   </td>
                                   <td>
                                         <script type="text/javascript">
                                             var percent= change/ninety[ninety.length-2]*100;
                                             if(change>0){
-                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                                document.write("<span style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
                                             }
                                             else if(change<0){
-                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                                document.write("<span style='color: red'> <i class='fa fa-fw fa-arrow-down'></i>");
                                             }
                                             document.write(Math.abs(percent.toFixed(2)));
-                                        </script>%
+                                            document.write("%</span>");
+                                        </script>
                                   </td>
                                   
                                                 </tr>
                                                 <tr>
-                                  <th scope="row">$R4</th>
                                   <td>Medium Risk</td>
                                   <td>
                                         <script type="text/javascript">
@@ -289,30 +292,32 @@
                                         <script type="text/javascript">
                                             var change = doublerisk[doublerisk.length-1]-doublerisk[doublerisk.length-2];
                                             if(change>0){
-                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                                document.write("<span style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
                                             }
                                             else if(change<0){
-                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                                document.write("<span style='color: red'> <i class='fa fa-fw fa-arrow-down'></i>");
                                             }
                                             document.write(Math.abs(change.toFixed(2)));
+                                            document.write("</span>");
                                         </script>
                                   </td>
                                   <td>
                                         <script type="text/javascript">
                                             var percent= change/doublerisk[doublerisk.length-2]*100;
                                             if(change>0){
-                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                                document.write("<span style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
                                             }
                                             else if(change<0){
-                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                                document.write("<span style='color: red'> <i class='fa fa-fw fa-arrow-down'></i>");
                                             }
                                             document.write(Math.abs(percent.toFixed(2)));
-                                        </script>%
+                                            document.write("%</span>");
+                                        </script>
                                   </td>
                                   
                                                 </tr>
                                                 <tr>
-                                  <th scope="row">$R5</th>
+                                  
                                   <td>High Risk</td>
                                   <td>
                                         <script type="text/javascript">
@@ -324,25 +329,27 @@
                                         <script type="text/javascript">
                                             var change = ultrarisk[ultrarisk.length-1]-ultrarisk[ultrarisk.length-2];
                                             if(change>0){
-                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                                document.write("<span style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
                                             }
                                             else if(change<0){
-                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                                document.write("<span style='color: red'> <i class='fa fa-fw fa-arrow-down'></i>");
                                             }
                                             document.write(Math.abs(change.toFixed(2)));
+                                            document.write("</span>");
                                         </script>
                                   </td>
                                   <td>
                                         <script type="text/javascript">
                                             var percent= change/ultrarisk[ultrarisk.length-2]*100;
                                             if(change>0){
-                                                document.write("<img src='assets/triangle-up.png'></img>");
+                                                document.write("<span style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
                                             }
                                             else if(change<0){
-                                                document.write("<img src='assets/triangle-down.png'></img>");
+                                                document.write("<span style='color: red'> <i class='fa fa-fw fa-arrow-down'></i>");
                                             }
                                             document.write(Math.abs(percent.toFixed(2)));
-                                        </script>%
+                                            document.write("%</span>");
+                                        </script>
                                   </td>
                   
                                 </tr>
@@ -742,6 +749,71 @@
   </div>
   </div>
 
+
+
+        <section class="project_know_area p-5" id="timeline">
+            <div class="container">
+                <div class="project_know_inner text-center">
+                    <h3>Timeline</h3>
+                    <p>Our journey.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="row m-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                <ul class="timeline">
+
+                  <li>
+                    <span style="color: #a7cb00; font-size: 20px;">Testing 1</span>
+                    <span href="#" class="float-right">2019 Q4</span>
+                    <p style="font-size: 16px;">We test our performance and risk management in the market</p>
+                  </li>
+
+                  <li>
+                    <span style="color: #a7cb00; font-size: 20px;">Testing 1 Passed</span>
+                    <span href="#" class="float-right">2019.12.31</span>
+                    <p style="font-size: 16px;">The tests end up with very satisfying result</p>
+                  </li>
+
+                  <li>
+                    <span style="color: #a7cb00; font-size: 20px;">Testing 2</span>
+                    <span href="#" class="float-right">2020 Q1</span>
+                    <p style="font-size: 16px;">We test our performance and risk management in the market</p>
+                  </li>
+
+                  <li>
+                    <span style="color: #a7cb00; font-size: 20px;">Testing 2 Result</span>
+                    <span href="#" class="float-right">2020.03.31</span>
+                    <p style="font-size: 16px;">. . .</p>
+                  </li>
+
+                  <li>
+                    <span style="color: #a7cb00; font-size: 20px;">Insider Offering</span>
+                    <span href="#" class="float-right">2020 Q2</span>
+                    <p style="font-size: 16px;">We offer our shares to Insider and monitor the performance</p>
+                  </li>
+
+                  <li>
+                    <span style="color: #a7cb00; font-size: 20px;">Trading Result</span>
+                    <span href="#" class="float-right">2020.06.30</span>
+                    <p style="font-size: 16px;">. . .</p>
+                  </li>
+
+                  <li>
+                    <span style="color: #a7cb00; font-size: 20px;">Scheduled IPO</span>
+                    <span href="#" class="float-right">2020 Q3</span>
+                    <p style="font-size: 16px;">We offer our shares to Public</p>
+
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         
         <!--================ start footer Area  =================-->	
         <footer class="footer-area">

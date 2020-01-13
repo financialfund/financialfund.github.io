@@ -1,17 +1,35 @@
-	var myJSON = '{"date":[\
-	"2019 October", 	"2019 October", 	"2019 October", 	"2019 October", \
-	"2019 November", 	"2019 November", 	"2019 November", 	"2019 November", \
-	"2019 December", 	"2019 December",	"2019 December",	"2019 December",	"2019 December",\
-	"2020 January"\
-	],"balance":[\
-	1000,			1040, 			1080, 			1119.23, \
-	1131.23,		1198.11, 		1244.25, 		1286.73, \
-	1254.76, 		1330.57,		1413.83,		1386.91,		1435.02,\
-	1517.08\
-	]}';
-	var myObj = JSON.parse(myJSON);
+	// var myJSON = '{"date":[\
+	// "2019 October", 	"2019 October", 	"2019 October", 	"2019 October", \
+	// "2019 November", 	"2019 November", 	"2019 November", 	"2019 November", \
+	// "2019 December", 	"2019 December",	"2019 December",	"2019 December",	"2019 December",\
+	// "2020 January"\
+	// ],"balance":[\
+	// 1000,			1040, 			1080, 			1119.23, \
+	// 1131.23,		1198.11, 		1244.25, 		1286.73, \
+	// 1254.76, 		1330.57,		1413.83,		1386.91,		1435.02,\
+	// 1517.08\
+	// ]}';
+	// var myObj = JSON.parse(myJSON);
 	
-    var management = 21079826.60;
+ //    console.log(myObj["balance"]);
+
+    var myObj = {
+    "date":
+
+    ["2019 October", "2019 October", "2019 October", "2019 October", 
+    "2019 November", "2019 November", "2019 November", "2019 November", 
+    "2019 December", "2019 December", "2019 December", "2019 December", "2019 December", 
+    "2020 January"], 
+
+    "balance":
+    [1000, 1040, 1080, 1119.23,
+    1131.23, 1198.11, 1244.25, 1286.73,
+    1254.76, 1330.57, 1413.83, 1386.91, 1435.02,
+    1517.08]
+
+    };
+
+    var management = 20758357.35;
 
 	var date = myObj["date"];
 	var overall = myObj["balance"];
