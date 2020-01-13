@@ -3,7 +3,7 @@
 	var obj = {
 		"Fixed":{"Entry": 0, "Units": 0, "Date": "", "Bonus": 0},
 		"No Risk":{"Entry": 1022.23, "Units": 0, "Date": "October, 12 2019", "Bonus": 0},
-		"Low Risk": {"Entry": 1000, "Units": 10000, "Date": "October, 12 2019", "Bonus": 30950},
+		"Low Risk": {"Entry": 1000, "Units": 10000, "Date": "October, 12 2019", "Bonus": 21665},
 		"Medium Risk": {"Entry": 0, "Units": 0, "Date": "", "Bonus": 0},
 		"High Risk": {"Entry": 0, "Units": 0, "Date": "", "Bonus": 0}
 	};
@@ -188,7 +188,7 @@
 		  			}
 		  			document.write(Math.abs(percent.toFixed(2))+"%</td>");
 
-		  			document.write("<td>"+bonus.toFixed(2)+"</td>");
+		  			document.write("<td>"+formatNumber(bonus.toFixed(2))+"</td>");
 
 		  			document.write("<td>"+formatNumber(Invested.toFixed(2))+"</td>");
 		  			document.write("<td>"+formatNumber(total.toFixed(2))+"</td>");
@@ -204,25 +204,26 @@
 		    	<th scope="row" colspan="5" style="font-size: 20px">Total: </th>
 		    	<script>
 		    		var gain = ((_current/_entry*100-100)).toFixed(2);
+		    		var gaincommission = (((_current+_bonus)/_entry*100-100)).toFixed(2);
 		    		document.write("<th>"+formatNumber(_units)+"</th>");
 
 		    		if (profit>0) {
 		  				document.write("<th style='color: #2ec551'>");
-		  				$("#pl").html("<span style='color: #2ec551'>"+formatNumber(Math.abs(_profit).toFixed(2))+"</span>");
+		  				$("#pl").html("<span style='color: #2ec551'>"+formatNumber((Math.abs(_profit)+_bonus).toFixed(2))+"</span>");
 		  			}
 		  			else{
 		  				document.write("<th style='color: red'>");
-		  				$("#pl").html("<span style='color: red'>"+formatNumber(Math.abs(_profit).toFixed(2))+"</span>");
+		  				$("#pl").html("<span style='color: red'>"+formatNumber((Math.abs(_profit)+_bonus).toFixed(2))+"</span>");
 		  			}
 		    		document.write(formatNumber(Math.abs(_profit).toFixed(2))+"</th>");
 		    		
 		    		if (gain>0) {
 		  				document.write("<th style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
-		  				$("#return").html("<span style='color: #2ec551'>"+Math.abs(gain).toFixed(2)+"%</span>");
+		  				$("#return").html("<span style='color: #2ec551'>"+Math.abs(gaincommission).toFixed(2)+"%</span>");
 		  			}
 		  			else{
 		  				document.write("<th style='color: red'> <i class='fa fa-fw fa-arrow-down'></i>");
-		  				$("#return").html("<span style='color: red'>"+Math.abs(gain).toFixed(2)+"%</span>");
+		  				$("#return").html("<span style='color: red'>"+Math.abs(gaincommission).toFixed(2)+"%</span>");
 		  			}
 		    		document.write(Math.abs(gain)+"%</th>");
 		    		document.write("<th>"+formatNumber(_bonus.toFixed(2))+"</th>");
