@@ -40,7 +40,7 @@ var options = {
     },
     yaxis:{
         min:Math.min(...ultrarisk),
-        forceNiceScale: true,
+        //forceNiceScale: true,
     },
     tooltip: {
         enabled: true,
