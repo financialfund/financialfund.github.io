@@ -275,7 +275,8 @@ chart: {
     offsetY: -20,
         animations:{
             enabled: true,
-        }
+        },
+    height: 200,
 },
 plotOptions: {
     radialBar: {
@@ -324,7 +325,7 @@ options = {
         offsetY: -20,
         animations:{
             enabled: true,
-        }
+        },height: 200,
     },
     plotOptions: {
         radialBar: {
@@ -383,7 +384,7 @@ var options = {
         offsetY: -20,
         animations:{
             enabled: true,
-        }
+        },height: 200,
     },
     plotOptions: {
         radialBar: {
@@ -441,7 +442,7 @@ var options = {
         offsetY: -20,
         animations:{
             enabled: true,
-        }
+        },height: 200,
     },
     plotOptions: {
         radialBar: {
@@ -499,7 +500,7 @@ var options = {
         offsetY: -20,
         animations:{
             enabled: true,
-        }
+        },height: 200,
     },
     plotOptions: {
         radialBar: {
@@ -556,7 +557,7 @@ var options = {
         offsetY: -20,
         animations:{
             enabled: true,
-        }
+        },height: 200,
     },
     plotOptions: {
         radialBar: {
@@ -613,7 +614,7 @@ var options = {
         offsetY: -20,
         animations:{
             enabled: true,
-        }
+        },height: 200,
     },
     plotOptions: {
         radialBar: {
@@ -670,7 +671,7 @@ var options = {
         offsetY: -20,
         animations:{
             enabled: true,
-        }
+        },height: 200,
     },
     plotOptions: {
         radialBar: {
@@ -727,7 +728,7 @@ var options = {
         offsetY: -20,
         animations:{
             enabled: true,
-        }
+        },height: 200,
     },
     plotOptions: {
         radialBar: {
