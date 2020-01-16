@@ -13,7 +13,7 @@
 	
  //    console.log(myObj["balance"]);
 
-    var split = 1/2;
+    var split = 2;
     var initial = 1000*split;
 
     var myObj = {
