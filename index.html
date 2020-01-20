@@ -32,6 +32,7 @@
 
   }
 }
+
             body{
             overflow-x:     hidden;
             user-select: none;
@@ -66,7 +67,7 @@
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: cover;
 }
 
 .parallax1 {
@@ -109,7 +110,11 @@
 .full{
    width: 100%;
 }
-
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
         </style>
         
       <script src="js/jquery-3.2.1.min.js"></script>
@@ -130,8 +135,8 @@
     <body>
 
         <!--================Header Menu Area =================-->
-        <header class="header_area col-12" id="home">
-            <div class="main_menu col-12">
+        <header class="header_area" id="home">
+            <div class="main_menu">
             	<nav class="navbar navbar-expand-lg navbar-light">
       					<div class="container box_1620">
       						<!-- Brand and toggle get grouped for better mobile display -->
