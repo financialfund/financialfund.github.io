@@ -14,6 +14,24 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
         <style type="text/css">
+
+          /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+   .parallax h1{
+    font-size: 80px;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  .parallax h1{
+    font-size: 48px;
+  }
+  .parallax1 h1{
+    font-size: 30px;
+
+  }
+}
             body{
             overflow-x:     hidden;
             user-select: none;
@@ -25,11 +43,66 @@
        -o-user-select: none;
           user-select: none;
           opacity: 0;
+          height: 100%;
+        }
+        html{
+          height: 100%;
         }
         .custom-control-input:checked~.custom-control-label::before {
             color: #fff;
             background-color: #a7cb00;
         }
+        .parallax {
+  /* The image used */
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  background-image: url('img/slider/slider-1.jpg');
+
+  /* Full height */
+  height: 90%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax1 {
+  /* The image used */
+  vertical-align: middle;
+  text-align: center;
+  color: white;
+  background-image: url('img/slider/slider-1.jpg');
+
+  /* Full height */
+  
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax h1{
+  font-weight: 300;
+}
+.vertical-center {
+  box-sizing: border-box;
+  padding: 15px;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: auto;
+}
+.def{
+  color: #a7cb00;
+}
         </style>
         
       <script src="js/jquery-3.2.1.min.js"></script>
@@ -50,7 +123,7 @@
     <body>
 
         <!--================Header Menu Area =================-->
-        <header class="header_area">
+        <header class="header_area" id="home">
             <div class="main_menu">
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container box_1620">
@@ -83,10 +156,21 @@
             	</nav>
             </div>
         </header>
+
+
+
+        <div class="parallax">
+          <div class="vertical-center">
+          <h1 class="">WE VALUE MONEY AS MUCH AS YOU DO.</h1>
+          <p >Sell at anytime from Saturday-Sunday 01:00-17:00 UTC.</p>
+          <a class="banner_btn" href="#getstarted">Get Started</a>
+          <a class="banner_btn2" href="#timeline">View Timeline</a>
+          </div>
+        </div>
         <!--================Header Menu Area =================-->
         
         <!--================Home Banner Area =================-->
-        <section class="home_banner_area" id="home">
+        <!-- <section class="home_banner_area" id="home">
             <div class="swiper-container">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide"><img src="img/slider/slider-1.jpg">
@@ -124,18 +208,27 @@
           </div>
         
 			</div>
-        </section>
+        </section> -->
         <!--================End Home Banner Area =================-->
 
 
-        <section class="project_know_area p-5" id="performance">
+        <!-- <section class="project_know_area p-5" id="performance">
             <div class="container" >
                 <div class="project_know_inner text-center">
                     <h3>Performance</h3>
                     <p>Compare our historical performance.</p>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+        <!-- divider -->
+        <div class="row mt-5" id="performance">
+          <div class="col-12">
+            <h1 class="display-3 text-center def pt-5">Performance</h1>
+            <p class="text-center h6">Compare our historical performance.</p>
+          </div>
+        </div>
+        <!-- divider -->
 
         <div class="row p-5">
           <div class="card-group col-12">
@@ -397,14 +490,25 @@
 
         <!--================End Mission Area =================-->
         
-        <section class="project_know_area p-5" id="portfolio">
+        <!-- <section class="project_know_area p-5" id="portfolio">
             <div class="container">
                 <div class="project_know_inner text-center">
                     <h3>Portfolio Allocation</h3>
                     <p>Design your own portfolio.</p>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+
+
+        <!-- divider -->
+        <div class="row" id="portfolio">
+          <div class="col-12">
+            <h1 class="display-3 text-center def pt-5">Portfolio</h1>
+            <p class="text-center h6">Design your own portfolio.</p>
+          </div>
+        </div>
+        <!-- divider -->
 
 
         <section class="project_area">
@@ -449,20 +553,28 @@
         </section>
 
 
-        <section class="project_know_area p-5" id="plans">
+
+        <!-- <section class="project_know_area p-5" id="plans">
             <div class="container">
                 <div class="project_know_inner text-center">
                     <h3>Plans</h3>
                     <p>Compare our plans.</p>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+
+        <!-- divider -->
+        <div class="row pb-3" id="plans">
+          <div class="col-12">
+            <h1 class="display-3 text-center def pt-5">Plans</h1>
+            <p class="text-center h6">Compare our plans.</p>
+          </div>
+        </div>
+        <!-- divider -->
 
         <!--================Success Area =================-->
         <section class="success_area">
-
-
-
           <div class="row m0">
                 <div class="col-lg-6 p0">
                     <div class="mission_text col-12">
@@ -576,14 +688,23 @@
         <!--================End Success Area =================-->
         
         
-        <section class="project_know_area p-5" id="getstarted">
+        <!-- <section class="project_know_area p-5" id="getstarted">
             <div class="container">
                 <div class="project_know_inner text-center">
                     <h3>Get Started</h3>
                     <p>Saturday-Sunday 01:00-17:00 UTC</p>
                 </div>
             </div>
-        </section>
+        </section> -->
+
+        <!-- divider -->
+        <div class="row" id="getstarted">
+          <div class="col-12">
+            <h1 class="display-3 text-center def pt-5">Get Started</h1>
+            <p class="text-center h6">Saturday-Sunday 01:00-17:00 UTC</p>
+          </div>
+        </div>
+        <!-- divider -->
 
     <div class="col-lg-12 col-xl-7 m-auto pt-2 pb-5">
     <div class="mt-3 text-center row">
@@ -770,18 +891,27 @@
 
 
 
-        <section class="project_know_area p-5" id="timeline">
+        <!-- <section class="project_know_area p-5" id="timeline">
             <div class="container">
                 <div class="project_know_inner text-center">
                     <h3>Timeline</h3>
                     <p>Our journey.</p>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <div class="row m-4">
-          <div class="container">
-            <div class="row">
+        <!-- divider -->
+        <div class="row" id="timeline">
+          <div class="col-12">
+            <h1 class="display-3 text-center def pt-5">Timeline</h1>
+            <p class="text-center h6">Our journey.</p>
+          </div>
+        </div>
+        <!-- divider -->
+
+        <div class="row m-4 pb-5">
+          <div class="container ">
+            <div class="row pb-5">
               <div class="col-md-6 offset-md-3">
                 <ul class="timeline">
 
@@ -837,6 +967,12 @@
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="parallax1 pt-5 pb-5">
+          <div>
+              <h1 class="display-5 bg-light text-dark p-3" style="font-weight: 300; opacity: 0.8; display: inline-block; text-transform: uppercase;">"No one is Born a Great Trader, one learns by trading."</h1>
           </div>
         </div>
         
