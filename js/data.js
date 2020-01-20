@@ -37,7 +37,9 @@
         myObj["balance"].push(i/100*myObj["balance"][myObj["balance"].length-1]+myObj["balance"][myObj["balance"].length-1]);
     }
 
+    var out = 5000;
     var management = 20758357.35;
+    var insider = 100;
 
 	var date = myObj["date"];
 	var overall = myObj["balance"];

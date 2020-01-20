@@ -137,17 +137,30 @@
             </div>
         </section>
 
-        <div class="row text-center p-5 m-0">
-          <div class="col-12 rounded-pill border border-success m-auto p-2">
-            <div class="row">
-              <div class="col-12"><h2>Assets Under Management</h2></div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <h4 id="totalasset">0.00</h4>
+        <div class="row p-5">
+          <div class="card-group col-12">
+            <div class="card text-center">
+              <div class="card-body">
+                <h3 class="card-title" style="opacity: 0.8">Assets Under Management</h3>
+                <h1 class="card-text" style="font-size: 48px; font-weight: 100;" id="totalasset"></h1>
               </div>
             </div>
-          </div>
+
+            <div class="card text-center">
+              <div class="card-body">
+                <h3 class="card-title" style="opacity: 0.8">Total Shares Outstanding</h3>
+                <h1 class="card-text" style="font-size: 48px; font-weight: 100;" id="out"></h1>
+              </div>
+            </div>
+
+          <div class="card text-center">
+              <div class="card-body">
+                <h3 class="card-title" style="opacity: 0.8">% Held by Insiders</h3>
+                <h1 class="card-text" style="font-size: 48px; font-weight: 100; color: #2ec551;" id="insider"></h1>
+              </div>
+            </div>
+            
+        </div>
         </div>
 
         <!--================Mission Area =================-->

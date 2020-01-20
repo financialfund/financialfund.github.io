@@ -23,6 +23,8 @@ $(document).ready(function(){
     } // End if
   });
 
+  $('#out').text(formatNumber(out)+".00");
+  $('#insider').text(insider+"%");
   $('#totalasset').text(formatNumber(management));
 
   $('#customSwitch1').on('change', function() {
