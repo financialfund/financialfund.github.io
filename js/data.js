@@ -22,7 +22,7 @@
     ["2019 October", "2019 October", "2019 October", "2019 October", 
     "2019 November", "2019 November", "2019 November", "2019 November", 
     "2019 December", "2019 December", "2019 December", "2019 December", "2019 December", 
-    "2020 January", "2019 January"], 
+    "2020 January", "2019 January", "2019 January"], 
 
     "balance":
     [initial]
@@ -31,7 +31,7 @@
     var incr = [4,3.85,3.63,
     1.07, 5.91, 3.85, 3.41,
     -2.48, 6.04, 6.26, -1.9, 3.47,
-    5.72, 0.61];
+    5.72, 0.61, -1.02];
 
     for(var i of incr){
         myObj["balance"].push(i/100*myObj["balance"][myObj["balance"].length-1]+myObj["balance"][myObj["balance"].length-1]);
