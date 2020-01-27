@@ -12,85 +12,8 @@
 		<canvas id="mycanvas"></canvas>
 <script>
 
-Chart.helpers.merge(Chart.defaults.global.plugins.datalabels, {
-    color: '#fff',
-    align: 'left',
-    anchor: 'end'
-});
 
-var ctx = document.getElementById('mycanvas');
-var myChart = new Chart(ctx, {
-    type: 'horizontalBar',
-    data: {
-    	labels: ['Weekly Average Return %'],
-        datasets: [{
-            label: type[0],
-            data: [weekly[0]],
-            backgroundColor: "#5C6BC0",
-            hoverBackgroundColor: "#5C6BC0",
-            
-        },
-        {
-            label: type[1],
-            data: [weekly[1]],
-            backgroundColor: '#29B6F6',
-            hoverBackgroundColor: '#29B6F6',
-            
-        },
-        {
-            label: type[2],
-            data: [weekly[2]],
-            backgroundColor: '#67BB6A',
-            hoverBackgroundColor: '#67BB6A',
-            
-        },
-        {
-            label: type[3],
-            data: [weekly[3]],
-            backgroundColor: '#FAD53F',
-            hoverBackgroundColor: "#FAD53F",
-        },
-        {
-            label: type[4],
-            data: [weekly[4]],
-            backgroundColor: "#FFA726",
-            hoverBackgroundColor: "#FFA726",
-            
-        },]
-    },
-    options: {
 
-        scales: {
-            xAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }],
-            yAxes: [{
-                display: false
-            }]
-        },
-        tooltips: {
-		    mode: "nearest",
-		  },
-		  
-        title: {
-		            display: true,
-		            fontSize: 24,
-		            text: 'Weekly Average Return',
-		            fontFamily: "'Helvetica', 'Arial', sans-serif",
-		            fontStyle: "normal",
-		        },
-		plugins: {
-            datalabels: {
-                formatter: function(value, context) {
-                    return value+"%";
-                }
-            }
-        }
-
-    }
-});
 
 </script>
 

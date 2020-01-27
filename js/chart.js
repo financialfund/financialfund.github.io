@@ -1,286 +1,10 @@
-var animate = false;
-
-var options = {
-    chart: {
-        height: 500,
-        type: 'line',
-        toolbar:{
-            show: false,
-        },
-        animations:{
-            enabled: animate,
-        }
-    },
-    markers: {
-        size: 0,
-    },
-    dataLabels: {
-        enabled: false
-    },
-    series: [
-    {
-        name: 'High Risk',
-        data: ultrarisk
-    }
-    ,{
-        name: 'Medium Risk',
-        data: doublerisk
-    }
-    ,{
-        name: 'Low Risk',
-        data: ninety
-    }
-    ,{
-        name: 'No Risk',
-        data: ninetyfive
-    },
-    {
-        name: 'No Risk, Fixed 0.15%',
-        data: fixed
-    }
-    ],
-    xaxis: {
-        type: 'text',
-        categories: date,                
-    },
-    yaxis:{
-        min:Math.min(...ultrarisk),
-        //forceNiceScale: true,
-    },
-    tooltip: {
-        enabled: true,
-    },
-    legend:{
-        inverseOrder: true,
-    	position: 'top',
-
-    },
-    stroke:{
-        curve: 'smooth',
-    	width: 3,
-    },
-    colors:['#FFA726','#FAD53F','#67BB6A','#29B6F6','#5C6BC0']
-}
-var compare = new ApexCharts(document.querySelector("#chart"),options);
-
-options = {
-    chart: {
-        height: 300,
-        type: 'area',
-        toolbar:{
-            show: false,
-        },
-        animations:{
-            enabled: animate,
-        }
-    },
-    dataLabels: {
-        enabled: false
-    },
-    stroke: {
-        curve: 'smooth'
-    },
-    series: [{
-        name: 'No Risk, Fixed 0.15%',
-        data: fixed
-    }
-    ],
-
-    xaxis: {
-        type: 'text',
-        categories: date,                
-    },
-    stroke:{
-    	width: 2,
-    },
-
-    colors:['#5C6BC0']
-
-}
-
-var area = new ApexCharts(
-    document.querySelector("#chart1"),
-    options
-);
-
-
-options = {
-    chart: {
-        type: 'area',
-        toolbar:{
-            show: false,
-        }
-        ,
-        animations:{
-            enabled: animate,
-        }
-        ,
-        height:300,
-    },
-    dataLabels: {
-        enabled: false
-    },
-    stroke: {
-        curve: 'smooth'
-    },
-    series: [{
-        name: 'No Risk',
-        data: ninetyfive
-    }
-    ],
-
-    xaxis: {
-        type: 'text',
-        categories: date,                
-    },
-    stroke:{
-    	width: 2,
-    },
-
-    colors:['#29B6F6']
-
-}
-
-var area1 = new ApexCharts(
-    document.querySelector("#chart2"),
-    options
-);
-
-options = {
-    chart: {
-        type: 'area',
-        toolbar:{
-            show: false,
-        },
-        animations:{
-            enabled: animate,
-        }
-        ,
-        height:300,
-    },
-    dataLabels: {
-        enabled: false
-    },
-    stroke: {
-        curve: 'smooth'
-    },
-    series: [{
-        name: 'Low Risk',
-        data: ninety
-    }
-    ],
-
-    xaxis: {
-        type: 'text',
-        categories: date,                
-    },
-    stroke:{
-    	width: 2,
-    },
-
-    colors:['#67BB6A']
-
-}
-
-var area2 = new ApexCharts(
-    document.querySelector("#chart3"),
-    options
-);
-
-
-options = {
-    chart: {
-        type: 'area',
-        toolbar:{
-            show: false,
-        },
-        animations:{
-            enabled: animate,
-        }
-        ,
-        height:300,
-    },
-    dataLabels: {
-        enabled: false
-    },
-    stroke: {
-        curve: 'smooth'
-    },
-    series: [{
-        name: 'Medium Risk',
-        data: doublerisk
-    }
-    ],
-    xaxis: {
-        type: 'text',
-        categories: date,                
-    },
-    stroke:{
-    	width: 2,
-    },
-
-    colors:['#FAD53F']
-
-}
-
-var area3 = new ApexCharts(
-    document.querySelector("#chart4"),
-    options
-);
-
-
-options = {
-    chart: {
-        type: 'area',
-        toolbar:{
-            show: false,
-        },
-        animations:{
-            enabled: animate,
-        }
-        ,
-        height:300,
-    },
-    dataLabels: {
-        enabled: false
-    },
-    stroke: {
-        curve: 'smooth'
-    },
-    series: [{
-        name: 'High Risk',
-        data: ultrarisk	
-    }
-    ],
-
-    xaxis: {
-        type: 'text',
-        categories: date,                
-    },
-    stroke:{
-    	width: 2,
-    },
-
-    colors:['#FFA726']
-
-}
-
-var area4 = new ApexCharts(
-    document.querySelector("#chart5"),
-    options
-);
-
-var c = ['#a7cb00'];
-
-
 Chart.helpers.merge(Chart.defaults.global.plugins.datalabels, {
     color: '#fff',
     align: 'left',
     anchor: 'end'
 });
 
-var ctx = document.getElementById('mycanvas');
-var myChart = new Chart(ctx, {
+new Chart(document.getElementById('mycanvas'), {
     type: 'horizontalBar',
     responsive: false,
     data: {
@@ -358,8 +82,7 @@ var myChart = new Chart(ctx, {
     }
 });
 
-var ctx1 = document.getElementById('mycanvas1');
-var myChart1 = new Chart(ctx1, {
+new Chart(document.getElementById('mycanvas1'), {
     type: 'horizontalBar',
     responsive: false,
     data: {
@@ -436,8 +159,7 @@ var myChart1 = new Chart(ctx1, {
     }
 });
 
-var ctx2 = document.getElementById('mycanvas2');
-var myChart2 = new Chart(ctx2, {
+new Chart(document.getElementById('mycanvas2'), {
     type: 'horizontalBar',
     responsive: false,
     data: {
@@ -514,9 +236,181 @@ var myChart2 = new Chart(ctx2, {
     }
 });
 
-compare.render();
-area.render();
-area1.render();
-area2.render();
-area3.render();
-area4.render();
+new Chart(document.getElementById("myarea"),{"type":"line","data":{
+    "labels":myObj["date"],
+    "datasets":[{"label":type[0],"data":fixed,
+    "fill":true,
+    "borderColor":"#5C6BC0",
+    backgroundColor: 'rgba(92,107,192,0.2)',
+    }]},
+    "options":{
+        maintainAspectRatio: false,
+        tooltips: {
+            mode: "nearest",
+            intersect: false,
+          },
+          legend:{
+            display: false,
+          },
+        plugins: {
+          datalabels: {
+             display: false
+          }
+        },
+
+    }});
+
+new Chart(document.getElementById("myarea1"),{"type":"line","data":{
+    "labels":myObj["date"],
+    "datasets":[{"label":type[1],"data":ninetyfive,
+    "fill":true,
+    "borderColor":"#29B6F6",
+    backgroundColor: 'rgba(41,182,246,0.2)',
+    }]},
+    "options":{
+        maintainAspectRatio: false,
+        tooltips: {
+            mode: "nearest",
+            intersect: false,
+          },
+          legend:{
+            display: false,
+          },
+        plugins: {
+          datalabels: {
+             display: false
+          }
+        },
+
+    }});
+
+new Chart(document.getElementById("myarea2"),{"type":"line","data":{
+    "labels":myObj["date"],
+    "datasets":[{"label":type[2],"data":ninety,
+    "fill":true,
+    "borderColor":"#67BB6A",
+    backgroundColor: 'rgba(103,187,106,0.2)',
+    }]},
+    "options":{
+        maintainAspectRatio: false,
+        tooltips: {
+            mode: "nearest",
+            intersect: false,
+          },
+          legend:{
+            display: false,
+          },
+        plugins: {
+          datalabels: {
+             display: false
+          }
+        },
+
+    }});
+
+new Chart(document.getElementById("myarea3"),{"type":"line","data":{
+    "labels":myObj["date"],
+    "datasets":[{"label":type[3],"data":doublerisk,
+    "fill":true,
+    "borderColor":"#FAD53F",
+    backgroundColor: 'rgba(250,213,63,0.2)',
+    }]},
+    "options":{
+        maintainAspectRatio: false,
+        tooltips: {
+            mode: "nearest",
+            intersect: false,
+          },
+          legend:{
+            display: false,
+          },
+        plugins: {
+          datalabels: {
+             display: false
+          }
+        },
+
+    }});
+
+new Chart(document.getElementById("myarea4"),{"type":"line","data":{
+    "labels":myObj["date"],
+    "datasets":[{"label":type[4],"data":ultrarisk,
+    "fill":true,
+    "borderColor":"#FFA726",
+    backgroundColor: 'rgba(255,167,38,0.2)',
+    }]},
+    "options":{
+        maintainAspectRatio: false,
+        tooltips: {
+            mode: "nearest",
+            intersect: false,
+          },
+          legend:{
+            display: false,
+          },
+        plugins: {
+          datalabels: {
+             display: false
+          }
+        },
+
+    }});
+
+new Chart(document.getElementById("compare"),{
+    "type":"line","data":{
+    "labels":myObj["date"],
+    "datasets":
+        [
+            {   
+                "label":type[0],"data":fixed,
+                "fill":true,
+                "borderColor":"#5C6BC0",
+                backgroundColor: 'rgba(92,107,192,0.2)',
+            },
+            {   
+                "label":type[1],"data":ninetyfive,
+                "fill":true,
+                "borderColor":"#29B6F6",
+                backgroundColor: 'rgba(41,182,246,0.2)',
+            },
+            {
+                "label":type[2],"data":ninety,
+                "fill":true,
+                "borderColor":"#67BB6A",
+                backgroundColor: 'rgba(103,187,106,0.2)',
+            },
+            {
+                "label":type[3],"data":doublerisk,
+                "fill":true,
+                "borderColor":"#FAD53F",
+                backgroundColor: 'rgba(250,213,63,0.2)',
+            },
+            {
+                "label":type[4],"data":ultrarisk,      
+                "fill":true,
+                "borderColor":"#FFA726",
+                backgroundColor: 'rgba(255,167,38,0.2)',
+            }
+
+        ]
+
+    },
+    "options":{
+        maintainAspectRatio: false,
+        tooltips: {
+            itemSort: function(a, b) {
+                return b.datasetIndex - a.datasetIndex
+              },
+            intersect: false,
+            mode: "index"
+          },
+          legend:{
+            display: true,
+          },
+        plugins: {
+          datalabels: {
+             display: false
+          }
+        },
+
+    }});
