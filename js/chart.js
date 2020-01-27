@@ -11,6 +11,9 @@ var options = {
             enabled: animate,
         }
     },
+    markers: {
+        size: 0,
+    },
     dataLabels: {
         enabled: false
     },
@@ -267,827 +270,253 @@ var area4 = new ApexCharts(
     options
 );
 
-        
-
 var c = ['#a7cb00'];
 
-options = {
-chart: {
-    type: 'radialBar',
-    offsetY: -20,
-        animations:{
-            enabled: animate,
+
+Chart.helpers.merge(Chart.defaults.global.plugins.datalabels, {
+    color: '#fff',
+    align: 'left',
+    anchor: 'end'
+});
+
+var ctx = document.getElementById('mycanvas');
+var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    responsive: false,
+    data: {
+        labels: ['Weekly Average Return %'],
+        datasets: [{
+            label: type[0],
+            data: [weekly[0]],
+            backgroundColor: "#5C6BC0",
+            hoverBackgroundColor: "#5C6BC0",
+            barPercentage: 0.95
         },
-    height: 200,
-},
-plotOptions: {
-    radialBar: {
-        startAngle: -90,
-        endAngle: 90,
-        track: {
-            background: "#e7e7e7",
-            strokeWidth: '97%',
-            margin: 5, // margin is in pixels
-            shadow: {
-                enabled: true,
-                top: 2,
-                left: 0,
-                color: '#999',
-                opacity: 1,
-                blur: 2
+        {
+            label: type[1],
+            data: [weekly[1]],
+            backgroundColor: '#29B6F6',
+            hoverBackgroundColor: '#29B6F6',
+            barPercentage: 0.95
+        },
+        {
+            label: type[2],
+            data: [weekly[2]],
+            backgroundColor: '#67BB6A',
+            hoverBackgroundColor: '#67BB6A',
+            barPercentage: 0.95
+        },
+        {
+            label: type[3],
+            data: [weekly[3]],
+            backgroundColor: '#FAD53F',
+            hoverBackgroundColor: "#FAD53F",
+            barPercentage: 0.95
+        },
+        {
+            label: type[4],
+            data: [weekly[4]],
+            backgroundColor: "#FFA726",
+            hoverBackgroundColor: "#FFA726",
+            barPercentage: 0.95
+        },]
+    },
+    options: {
+        maintainAspectRatio: false,
+        scales: {
+            xAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+
+            }],
+            yAxes: [{
+                display: false,
+                
+            }]
+        },
+        tooltips: {
+            mode: "nearest",
+          },
+
+          
+        title: {
+                    display: true,
+                    fontSize: 24,
+                    text: 'Weekly Average Return',
+                    fontFamily: "'Helvetica', 'Arial', sans-serif",
+                    fontStyle: "normal",
+                },
+        plugins: {
+            datalabels: {
+                formatter: function(value, context) {
+                    return value+"%";
+                }
             }
-        },
-        dataLabels: {
-            name: {
-                show: false
-            },   
-            value: {
-                offsetY: -2,
-                fontSize: '22px'
-            }                     
         }
+
     }
-},
-series: [0], 
-}
+});
 
-var round = new ApexCharts(
-    document.querySelector("#round"),
-    options
-);
-
-var round2 = new ApexCharts(
-    document.querySelector("#round2"),
-    options
-);
-
-options = {
-    chart: {
-        type: 'radialBar',
-        offsetY: -20,
-        animations:{
-            enabled: animate,
-        },height: 200,
+var ctx1 = document.getElementById('mycanvas1');
+var myChart1 = new Chart(ctx1, {
+    type: 'horizontalBar',
+    responsive: false,
+    data: {
+        labels: ['Monthly Average Return %'],
+        datasets: [{
+            label: type[0],
+            data: [monthly[0]],
+            backgroundColor: "#5C6BC0",
+            hoverBackgroundColor: "#5C6BC0",
+            barPercentage: 0.95
+        },
+        {
+            label: type[1],
+            data: [monthly[1]],
+            backgroundColor: '#29B6F6',
+            hoverBackgroundColor: '#29B6F6',
+            barPercentage: 0.95
+        },
+        {
+            label: type[2],
+            data: [monthly[2]],
+            backgroundColor: '#67BB6A',
+            hoverBackgroundColor: '#67BB6A',
+            barPercentage: 0.95
+        },
+        {
+            label: type[3],
+            data: [monthly[3]],
+            backgroundColor: '#FAD53F',
+            hoverBackgroundColor: "#FAD53F",
+            barPercentage: 0.95
+        },
+        {
+            label: type[4],
+            data: [monthly[4]],
+            backgroundColor: "#FFA726",
+            hoverBackgroundColor: "#FFA726",
+            barPercentage: 0.95
+        },]
     },
-    plotOptions: {
-        radialBar: {
-            startAngle: -90,
-            endAngle: 90,
-            track: {
-                background: "#e7e7e7",
-                strokeWidth: '97%',
-                margin: 5, // margin is in pixels
-                shadow: {
-                    enabled: true,
-                    top: 2,
-                    left: 0,
-                    color: '#999',
-                    opacity: 1,
-                    blur: 2
+    options: {
+        maintainAspectRatio: false,
+        scales: {
+            xAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+
+            }],
+            yAxes: [{
+                display: false,
+            }]
+        },
+        tooltips: {
+            mode: "nearest",
+          },
+
+          
+        title: {
+                    display: true,
+                    fontSize: 24,
+                    text: 'Weekly Average Return',
+                    fontFamily: "'Helvetica', 'Arial', sans-serif",
+                    fontStyle: "normal",
+                },
+        plugins: {
+            datalabels: {
+                formatter: function(value, context) {
+                    return value+"%";
                 }
-            },
-            dataLabels: {
-                name: {
-                    show: false
-                },   
-                value: {
-                    offsetY: -2,
-                    fontSize: '22px'
-                }                     
             }
         }
-    },
-    fill: {
-        type: 'gradient',
-        gradient: {
-            shade: 'light',
-            shadeIntensity: 0.4,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 1,
-            stops: [0, 50, 53, 91]
-        },
-    },
-    colors: c,
-    series: [30],
-   
-}
 
-var round1 = new ApexCharts(
-    document.querySelector("#round1"),
-    options
-);
-
-
-
-var options = {
-    chart: {
-        type: 'radialBar',
-        offsetY: -20,
-        animations:{
-            enabled: animate,
-        },height: 200,
-    },
-    plotOptions: {
-        radialBar: {
-            startAngle: -90,
-            endAngle: 90,
-            track: {
-                background: "#e7e7e7",
-                strokeWidth: '97%',
-                margin: 5, // margin is in pixels
-                shadow: {
-                    enabled: true,
-                    top: 2,
-                    left: 0,
-                    color: '#999',
-                    opacity: 1,
-                    blur: 2
-                }
-            },
-            dataLabels: {
-                name: {
-                    show: false
-                },   
-                value: {
-                    offsetY: -2,
-                    fontSize: '22px'
-                }                     
-            }
-        }
-    },
-    fill: {
-        type: 'gradient',
-        gradient: {
-            shade: 'light',
-            shadeIntensity: 0.4,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 1,
-            stops: [0, 50, 53, 91]
-        },
-    },
-    colors: c,
-    series: [37],
-   
-}
-
-var round3 = new ApexCharts(
-    document.querySelector("#round3"),
-    options
-);
-
-
-var options = {
-    chart: {
-        type: 'radialBar',
-        offsetY: -20,
-        animations:{
-            enabled: animate,
-        },height: 200,
-    },
-    plotOptions: {
-        radialBar: {
-            startAngle: -90,
-            endAngle: 90,
-            track: {
-                background: "#e7e7e7",
-                strokeWidth: '97%',
-                margin: 5, // margin is in pixels
-                shadow: {
-                    enabled: true,
-                    top: 2,
-                    left: 0,
-                    color: '#999',
-                    opacity: 1,
-                    blur: 2
-                }
-            },
-            dataLabels: {
-                name: {
-                    show: false
-                },   
-                value: {
-                    offsetY: -2,
-                    fontSize: '22px'
-                }                     
-            }
-        }
-    },
-    fill: {
-        type: 'gradient',
-        gradient: {
-            shade: 'light',
-            shadeIntensity: 0,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 1,
-            stops: [0, 50, 53, 91]
-        },
-    },
-    colors : ['#FFA726'],
-    series: [10],
-   
-}
-
-var round4 = new ApexCharts(
-    document.querySelector("#round4"),
-    options
-);
-
-
-var options = {
-    chart: {
-        type: 'radialBar',
-        offsetY: -20,
-        animations:{
-            enabled: animate,
-        },height: 200,
-    },
-    plotOptions: {
-        radialBar: {
-            startAngle: -90,
-            endAngle: 90,
-            track: {
-                background: "#e7e7e7",
-                strokeWidth: '97%',
-                margin: 5, // margin is in pixels
-                shadow: {
-                    enabled: true,
-                    top: 2,
-                    left: 0,
-                    color: '#999',
-                    opacity: 1,
-                    blur: 2
-                }
-            },
-            dataLabels: {
-                name: {
-                    show: false
-                },   
-                value: {
-                    offsetY: -2,
-                    fontSize: '22px'
-                }                     
-            }
-        }
-    },
-    fill: {
-        type: 'gradient',
-        gradient: {
-            shade: 'light',
-            shadeIntensity: 0.4,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 1,
-            stops: [0, 50, 53, 91]
-        },
-    },
-    colors: c,
-    series: [55],
-   
-}
-
-var round5 = new ApexCharts(
-    document.querySelector("#round5"),
-    options
-);
-
-var options = {
-    chart: {
-        type: 'radialBar',
-        offsetY: -20,
-        animations:{
-            enabled: animate,
-        },height: 200,
-    },
-    plotOptions: {
-        radialBar: {
-            startAngle: -90,
-            endAngle: 90,
-            track: {
-                background: "#e7e7e7",
-                strokeWidth: '97%',
-                margin: 5, // margin is in pixels
-                shadow: {
-                    enabled: true,
-                    top: 2,
-                    left: 0,
-                    color: '#999',
-                    opacity: 1,
-                    blur: 2
-                }
-            },
-            dataLabels: {
-                name: {
-                    show: false
-                },   
-                value: {
-                    offsetY: -2,
-                    fontSize: '22px'
-                }                     
-            }
-        }
-    },
-    fill: {
-        type: 'gradient',
-        gradient: {
-            shade: 'light',
-            shadeIntensity: 0.4,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 1,
-            stops: [0, 50, 53, 91]
-        },
-    },
-    colors : ['#FFA726'],
-    series: [50],
-   
-}
-
-var round6 = new ApexCharts(
-    document.querySelector("#round6"),
-    options
-);
-
-var options = {
-    chart: {
-        type: 'radialBar',
-        offsetY: -20,
-        animations:{
-            enabled: animate,
-        },height: 200,
-    },
-    plotOptions: {
-        radialBar: {
-            startAngle: -90,
-            endAngle: 90,
-            track: {
-                background: "#e7e7e7",
-                strokeWidth: '97%',
-                margin: 5, // margin is in pixels
-                shadow: {
-                    enabled: true,
-                    top: 2,
-                    left: 0,
-                    color: '#999',
-                    opacity: 1,
-                    blur: 2
-                }
-            },
-            dataLabels: {
-                name: {
-                    show: false
-                },   
-                value: {
-                    offsetY: -2,
-                    fontSize: '22px'
-                }                     
-            }
-        }
-    },
-    fill: {
-        type: 'gradient',
-        gradient: {
-            shade: 'light',
-            shadeIntensity: 0.4,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 1,
-            stops: [0, 50, 53, 91]
-        },
-    },
-    colors: c,
-    series: [74],
-   
-}
-
-var round7 = new ApexCharts(
-    document.querySelector("#round7"),
-    options
-);
-
-var options = {
-    chart: {
-        type: 'radialBar',
-        offsetY: -20,
-        animations:{
-            enabled: animate,
-        },height: 200,
-    },
-    plotOptions: {
-        radialBar: {
-            startAngle: -90,
-            endAngle: 90,
-            track: {
-                background: "#e7e7e7",
-                strokeWidth: '97%',
-                margin: 5, // margin is in pixels
-                shadow: {
-                    enabled: true,
-                    top: 2,
-                    left: 0,
-                    color: '#999',
-                    opacity: 1,
-                    blur: 2
-                }
-            },
-            dataLabels: {
-                name: {
-                    show: false
-                },   
-                value: {
-                    offsetY: -2,
-                    fontSize: '22px'
-                }                     
-            }
-        }
-    },
-    fill: {
-        type: 'gradient',
-        gradient: {
-            shade: 'light',
-            shadeIntensity: 0.2,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 1,
-            stops: [0, 50, 53, 91]
-        },
-    },
-    colors : ['#FFA726'],
-    series: [90],
-   
-}
-
-var round8 = new ApexCharts(
-    document.querySelector("#round8"),
-    options
-);
-
-var options = {
-    chart: {
-        type: 'radialBar',
-        offsetY: -20,
-        animations:{
-            enabled: animate,
-        },height: 200,
-    },
-    plotOptions: {
-        radialBar: {
-            startAngle: -90,
-            endAngle: 90,
-            track: {
-                background: "#e7e7e7",
-                strokeWidth: '97%',
-                margin: 5, // margin is in pixels
-                shadow: {
-                    enabled: true,
-                    top: 2,
-                    left: 0,
-                    color: '#999',
-                    opacity: 1,
-                    blur: 2
-                }
-            },
-            dataLabels: {
-                name: {
-                    show: false
-                },   
-                value: {
-                    offsetY: -2,
-                    fontSize: '22px'
-                }                     
-            }
-        }
-    },
-    fill: {
-        type: 'gradient',
-        gradient: {
-            shade: 'light',
-            shadeIntensity: 0.2,
-            inverseColors: false,
-            opacityFrom: 1,
-            opacityTo: 1,
-            stops: [0, 50, 53, 91]
-        },
-    },
-    colors: c,
-    series: [95],
-   
-}
-
-var round9 = new ApexCharts(
-    document.querySelector("#round9"),
-    options
-);
-
-
-
-var type = ['No Risk, Fixed 0.15%', 'No Risk', 'Low Risk'];
-
-var options = {
-  chart: {
-    height: 380,
-    type: "donut",
-        animations:{
-            enabled: animate,
-        }
-  },
-  series: [30, 40, 30],
-  legend: {
-    position: 'top'
-  },
-  plotOptions: {
-     pie: {
-       customScale: 0.75,
-       offsetY: -40
-     }
-  },
-  labels: type,
-  theme: {
-              palette: 'palette2', 
-        }
-};
-var donut = new ApexCharts(document.querySelector("#donut"), options);
-
-    
-type = ['No Risk, Fixed 0.15%', 'No Risk', 'Low Risk', 'Medium Risk', 'High Risk'];
-
-var options = {
-  chart: {
-    height: 380,
-    type: "donut",
-        animations:{
-            enabled: animate,
-        }
-  },
-  series: [15, 20, 35, 20, 10],
-  legend: {
-    position: 'top'
-  },
-  plotOptions: {
-     pie: {
-       customScale: 0.75,
-       offsetY: -40
-     }
-  },
-  labels: type,
-  theme: {
-              palette: 'palette2', 
-        }
-};
-var donut1 = new ApexCharts(document.querySelector("#donut1"), options);
-
-
-var options = {
-  chart: {
-    height: 380,
-    type: "donut",
-        animations:{
-            enabled: animate,
-        }
-  },
-  series: [20, 25, 35, 10, 10],
-  legend: {
-    position: 'top'
-  },
-  plotOptions: {
-     pie: {
-       customScale: 0.75,
-       offsetY: -40
-     }
-  },
-  labels: type,
-  theme: {
-              palette: 'palette2', 
-        }
-};
-var donut2 = new ApexCharts(document.querySelector("#donut2"), options);
-
-
-var options = {
-    title: {
-            text: 'Weekly Average Return',
-            align: 'center',
-            style: {
-            fontSize:  '24px'
-            },
-    },
-    chart: {
-        height: 430,
-        type: 'bar',
-        toolbar:{
-            show:false
-        },
-        animations:{
-            enabled: animate,
-        }
-    },
-    plotOptions: {
-        bar: {
-            horizontal: true,
-            dataLabels: {
-                position: 'top',
-        },
-    }  
-    },
-    dataLabels: {
-        enabled: true,
-        offsetX: -6,
-        style: {
-            fontSize: '12px',
-            colors: ['#fff']
-        }
-    },
-    stroke: {
-        show: true,
-        width: 1,
-        colors: ['#fff']
-    },
-    series: [
-        {   name: type[0],
-            data: [weekly[0]]},
-        {   name: type[1],
-            data: [weekly[1]]},
-        {   name: type[2],
-            data: [weekly[2]]},
-        {   name: type[3],
-            data: [weekly[3]]},
-        {   name: type[4],
-            data: [weekly[4]]}
-    ],
-    legend: {
-        position: 'top'
-    },
-    
-    xaxis: {
-        categories: [''],
-    },
-    theme: {
-          palette: 'palette2', 
     }
-}
+});
 
-var bar = new ApexCharts(
-    document.querySelector("#bar"),
-    options
-);
+var ctx2 = document.getElementById('mycanvas2');
+var myChart2 = new Chart(ctx2, {
+    type: 'horizontalBar',
+    responsive: false,
+    data: {
+        labels: ['Yearly Estimated Return %'],
+        datasets: [{
+            label: type[0],
+            data: [yearly[0]],
+            backgroundColor: "#5C6BC0",
+            hoverBackgroundColor: "#5C6BC0",
+            barPercentage: 0.95
+        },
+        {
+            label: type[1],
+            data: [yearly[1]],
+            backgroundColor: '#29B6F6',
+            hoverBackgroundColor: '#29B6F6',
+            barPercentage: 0.95
+        },
+        {
+            label: type[2],
+            data: [yearly[2]],
+            backgroundColor: '#67BB6A',
+            hoverBackgroundColor: '#67BB6A',
+            barPercentage: 0.95
+        },
+        {
+            label: type[3],
+            data: [yearly[3]],
+            backgroundColor: '#FAD53F',
+            hoverBackgroundColor: "#FAD53F",
+            barPercentage: 0.95
+        },
+        {
+            label: type[4],
+            data: [yearly[4]],
+            backgroundColor: "#FFA726",
+            hoverBackgroundColor: "#FFA726",
+            barPercentage: 0.95
+        },]
+    },
+    options: {
+        maintainAspectRatio: false,
+        scales: {
+            xAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
 
-var options = {
-    title: {
-            text: 'Monthly Average Return',
-            align: 'center',
-            style: {
-            fontSize:  '24px'
-            },
-    },
-    chart: {
-        height: 430,
-        type: 'bar',
-        toolbar:{
-            show:false
+            }],
+            yAxes: [{
+                display: false,
+            }]
         },
-        animations:{
-            enabled: animate,
+        tooltips: {
+            mode: "nearest",
+          },
+
+          
+        title: {
+                    display: true,
+                    fontSize: 24,
+                    text: 'Weekly Average Return',
+                    fontFamily: "'Helvetica', 'Arial', sans-serif",
+                    fontStyle: "normal",
+                },
+        plugins: {
+            datalabels: {
+                formatter: function(value, context) {
+                    return value+"%";
+                }
+            }
         }
-    },
-    plotOptions: {
-        bar: {
-            horizontal: true,
-            dataLabels: {
-                position: 'top',
-        },
-    }  
-    },
-    dataLabels: {
-        enabled: true,
-        offsetX: -6,
-        style: {
-            fontSize: '12px',
-            colors: ['#fff']
-        }
-    },
-    stroke: {
-        show: true,
-        width: 1,
-        colors: ['#fff']
-    },
-    series: [
-        {   name: type[0],
-            data: [monthly[0]]},
-        {   name: type[1],
-            data: [monthly[1]]},
-        {   name: type[2],
-            data: [monthly[2]]},
-        {   name: type[3],
-            data: [monthly[3]]},
-        {   name: type[4],
-            data: [monthly[4]]}
-    ],
-    legend: {
-        position: 'top'
-    },
-    
-    xaxis: {
-        categories: [''],
-    },
-    theme: {
-          palette: 'palette2', 
+
     }
-}
-
-var bar1 = new ApexCharts(
-    document.querySelector("#bar1"),
-    options
-);
-
-var options = {
-    title: {
-            text: 'Yearly Estimated Average Return',
-            align: 'center',
-            style: {
-            fontSize:  '24px'
-            },
-    },
-    chart: {
-        height: 430,
-        type: 'bar',
-        toolbar:{
-            show:false
-        },
-        animations:{
-            enabled: animate,
-        }
-    },
-    plotOptions: {
-        bar: {
-            horizontal: true,
-            dataLabels: {
-                position: 'top',
-        },
-    }  
-    },
-    dataLabels: {
-        enabled: true,
-        offsetX: -6,
-        style: {
-            fontSize: '12px',
-            colors: ['#fff']
-        }
-    },
-    stroke: {
-        show: true,
-        width: 1,
-        colors: ['#fff']
-    },
-    series: [
-        {   name: type[0],
-            data: [yearly[0]]},
-        {   name: type[1],
-            data: [yearly[1]]},
-        {   name: type[2],
-            data: [yearly[2]]},
-        {   name: type[3],
-            data: [yearly[3]]},
-        {   name: type[4],
-            data: [yearly[4]]}
-    ],
-    legend: {
-        position: 'top'
-    },
-    
-    xaxis: {
-        categories: [''],
-    },
-    theme: {
-          palette: 'palette2', 
-    }
-}
-
-var bar2 = new ApexCharts(
-    document.querySelector("#bar2"),
-    options
-);
+});
 
 compare.render();
-bar.render();
-bar1.render();
-bar2.render();
-donut.render();
-donut1.render();
-donut2.render();
-round.render();
-round1.render();
 area.render();
-round2.render();
-round3.render();
 area1.render();
-round4.render();
-round5.render();
 area2.render();
-round6.render();
-round7.render();
 area3.render();
-round8.render();
-round9.render();
 area4.render();

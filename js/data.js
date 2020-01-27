@@ -19,14 +19,17 @@
     var myObj = {
     "date":
 
-    ["2019 October", "2019 October", "2019 October", "2019 October", 
-    "2019 November", "2019 November", "2019 November", "2019 November", 
-    "2019 December", "2019 December", "2019 December", "2019 December", "2019 December", 
-    "2020 January", "2019 January", "2019 January"], 
+    ["19/10", "19/10", "19/10", "19/10", 
+    "19/11", "19/11", "19/11", "19/11", 
+    "19/12", "19/12", "19/12", "19/12", "19/12", 
+    "20/01", "20/01", "20/01"], 
 
     "balance":
     [initial]
     };
+
+
+    var type = ['No Risk, Fixed 0.15%', 'No Risk', 'Low Risk', 'Medium Risk', 'High Risk'];
 
     var incr = [4,3.85,3.63,
     1.07, 5.91, 3.85, 3.41,

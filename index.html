@@ -86,7 +86,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.port{
+  height: 320px; 
+  width: auto !important;
+}
 .parallax h1{
   font-weight: 300;
 }
@@ -110,6 +113,13 @@
 .full{
    width: 100%;
 }
+.radial{
+  height: 60px;
+}
+.canvas{
+  height: 430px;
+}
+
 @media only screen and (max-device-width: 1366px) {
   .parallax, .parallax1 {
     background-attachment: scroll;
@@ -130,6 +140,8 @@
           
         };
         </script>
+        <script type="text/javascript" src="js/chart.min.js"></script>
+        <script type="text/javascript" src="js/chartjs-plugin-datalabels.min.js"></script>
       </head>
 
     <body>
@@ -180,58 +192,6 @@
           </div>
         </div>
         <!--================Header Menu Area =================-->
-        
-        <!--================Home Banner Area =================-->
-        <!-- <section class="home_banner_area" id="home">
-            <div class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="img/slider/slider-1.jpg">
-						<div class="slider_text_inner">
-							<div class="container">
-								<div class="row">
-									<div class="col-lg-7">
-										<div class="slider_text">
-											<h2>We value money<br />as much as you do</h2>
-											<p>Sell at anytime from Saturday-Sunday 01:00-17:00 UTC.</p>
-											<a class="banner_btn" href="#">Get Started</a>
-											<a class="banner_btn2" href="#">View History</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				
-          <div class="swiper-slide"><img src="img/slider/slider-2.jpg">
-            <div class="slider_text_inner">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-7">
-                    <div class="slider_text">
-                      <h2>We are professional <br />risk manager</h2>
-                      <p>Choose your own plan from no risk at all to high risk.</p>
-                      <a class="banner_btn" href="#">Get Started</a>
-                      <a class="banner_btn2" href="#">View History</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        
-			</div>
-        </section> -->
-        <!--================End Home Banner Area =================-->
-
-
-        <!-- <section class="project_know_area p-5" id="performance">
-            <div class="container" >
-                <div class="project_know_inner text-center">
-                    <h3>Performance</h3>
-                    <p>Compare our historical performance.</p>
-                </div>
-            </div>
-        </section> -->
 
         <!-- divider -->
         <div class="mt-5" id="performance">
@@ -481,36 +441,27 @@
 
         <section class="project_area">
             <div class="row m0">
-                <div class="col-lg-4 col-md-6 p0">
-                    <div class="project_item">
-                        <div id="bar"></div>
+                <div class="col-lg-4 col-md-6 p5">
+                    <div class="">
+                        <canvas id="mycanvas" class="canvas"></canvas>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 p0">
-                    <div class="project_item">
-                        <div id="bar1"></div>
+                <div class="col-lg-4 col-md-6 p5">
+                    <div class="">
+                        <canvas id="mycanvas1" class="canvas"></canvas>
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-12 p0">
-                    <div class="project_item">
-                        <div id="bar2"></div>
+                <div class="col-lg-4 col-md-12 p5">
+                    <div class="">
+                        <canvas id="mycanvas2" class="canvas"></canvas>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!--================End Mission Area =================-->
-        
-        <!-- <section class="project_know_area p-5" id="portfolio">
-            <div class="container">
-                <div class="project_know_inner text-center">
-                    <h3>Portfolio Allocation</h3>
-                    <p>Design your own portfolio.</p>
-                </div>
-            </div>
-        </section> -->
+
 
 
 
@@ -524,12 +475,14 @@
         <!-- divider -->
 
 
-        <section class="project_area">
+        <section class="project_area pt-4">
             <div class="row m0">
                 <div class="col-lg-4 col-md-6 p0">
-                    <div class="project_item">
-                        <div id="donut" class="p-5"></div>
-                        <div class="hover_text">
+                    <div class="project_item mb-5">
+                        <div class="text-center"> 
+                          <img class="port" src="img/chart/conservative.jpg">
+                        </div>
+                        <div class="hover_text pb-4">
                             <h4>Conservative</h4>
                             <div class="cat">
                                 <a >Stable Growth</a>
@@ -539,9 +492,11 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 p0">
-                    <div class="project_item">
-                        <div id="donut1" class="p-5"></div>
-                        <div class="hover_text">
+                    <div class="project_item mb-5">
+                        <div class="text-center">
+                          <img class="port" src="img/chart/aggresive.jpg">
+                        </div>
+                        <div class="hover_text pb-4">
                             <h4>Aggresive</h4>
                             <div class="cat">
                                 <a >Fast Growth</a>
@@ -551,9 +506,11 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 p0 m-auto">
-                    <div class="project_item">
-                        <div id="donut2" class="p-5"></div>
-                        <div class="hover_text">
+                    <div class="project_item mb-5">
+                        <div class="text-center">
+                          <img class="port" src="img/chart/recommended.jpg">
+                        </div>
+                        <div class="hover_text pb-4">
                             <h4>Recommended</h4>
                             <div class="cat">
                                 <a >Balanced</a>
@@ -565,16 +522,6 @@
             </div>
         </section>
 
-
-
-        <!-- <section class="project_know_area p-5" id="plans">
-            <div class="container">
-                <div class="project_know_inner text-center">
-                    <h3>Plans</h3>
-                    <p>Compare our plans.</p>
-                </div>
-            </div>
-        </section> -->
 
 
         <!-- divider -->
@@ -596,11 +543,11 @@
                         <div class="row mt-3">
                             <div class="col col-6">
                                 <h5>Risk</h5>
-                                <div id="round"></div>
+                                <img class="radial" src="img/chart/zero.jpg">
                             </div>
                             <div class="col col-6">
                                 <h5>Return</h5>
-                                <div id="round1"></div>
+                                <img class="radial" src="img/chart/thirty.jpg">
                             </div>
                         </div>
                     </div>
@@ -618,11 +565,11 @@
                         <div class="row mt-3">
                             <div class="col col-6">
                                 <h5>Risk</h5>
-                                <div id="round2"></div>
+                                <img class="radial" src="img/chart/zero.jpg">
                             </div>
                             <div class="col col-6">
                                 <h5>Return</h5>
-                                <div id="round3"></div>
+                                <img class="radial" src="img/chart/thirtyseven.jpg">
                             </div>
                         </div>
                     </div>
@@ -641,11 +588,11 @@
                         <div class="row mt-3">
                             <div class="col col-6">
                                 <h5>Risk</h5>
-                                <div id="round4"></div>
+                                <img class="radial" src="img/chart/ten.jpg">
                             </div>
                             <div class="col col-6">
                                 <h5>Return</h5>
-                                <div id="round5"></div>
+                                <img class="radial" src="img/chart/fiftyfive.jpg">
                             </div>
                         </div>
                     </div>
@@ -662,11 +609,11 @@
                         <div class="row mt-3">
                             <div class="col col-6">
                                 <h5>Risk</h5>
-                                <div id="round6"></div>
+                                <img class="radial" src="img/chart/fifty.jpg">
                             </div>
                             <div class="col col-6">
                                 <h5>Return</h5>
-                                <div id="round7"></div>
+                                <img class="radial" src="img/chart/seventyfour.jpg">
                             </div>
                         </div>
                     </div>
@@ -683,11 +630,11 @@
                         <div class="row mt-3">
                             <div class="col col-6">
                                 <h5>Risk</h5>
-                                <div id="round8"></div>
+                                <img class="radial" src="img/chart/ninety.jpg">
                             </div>
                             <div class="col col-6">
                                 <h5>Return</h5>
-                                <div id="round9"></div>
+                                <img class="radial" src="img/chart/ninetyfive.jpg">
                             </div>
                         </div>
                     </div>
@@ -698,19 +645,7 @@
             </div>
 
         </section>
-        <!--================End Success Area =================-->
-        
-        
-        <!-- <section class="project_know_area p-5" id="getstarted">
-            <div class="container">
-                <div class="project_know_inner text-center">
-                    <h3>Get Started</h3>
-                    <p>Saturday-Sunday 01:00-17:00 UTC</p>
-                </div>
-            </div>
-        </section> -->
 
-        <!-- divider -->
         <div class="" id="getstarted">
           <div class="col-12">
             <h1 class="display-4 text-center def pt-5">Get Started</h1>
@@ -903,15 +838,6 @@
   </div>
 
 
-
-        <!-- <section class="project_know_area p-5" id="timeline">
-            <div class="container">
-                <div class="project_know_inner text-center">
-                    <h3>Timeline</h3>
-                    <p>Our journey.</p>
-                </div>
-            </div>
-        </section> -->
 
         <!-- divider -->
         <div class="" id="timeline">
