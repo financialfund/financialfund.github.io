@@ -421,7 +421,7 @@ var myChart1 = new Chart(ctx1, {
         title: {
                     display: true,
                     fontSize: 24,
-                    text: 'Weekly Average Return',
+                    text: 'Monthly Average Return',
                     fontFamily: "'Helvetica', 'Arial', sans-serif",
                     fontStyle: "normal",
                 },
@@ -499,7 +499,7 @@ var myChart2 = new Chart(ctx2, {
         title: {
                     display: true,
                     fontSize: 24,
-                    text: 'Weekly Average Return',
+                    text: 'Yearly Estimated Return',
                     fontFamily: "'Helvetica', 'Arial', sans-serif",
                     fontStyle: "normal",
                 },
