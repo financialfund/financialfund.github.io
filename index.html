@@ -80,6 +80,7 @@
        -o-user-select: none;
           user-select: none;
           height: 100%;
+          opacity: 0;
         }
         html{
           height: 100%;
@@ -1023,7 +1024,13 @@
         <script type="text/javascript">
             window.onload = function() {
               $( ".overlay" ).css("display", "none");
+              $( "body" ).animate({
+                  opacity: 1
+                }, 1000, function() {
+                  // Animation complete.
+                });
               $("body").css("overflow-y", "scroll");
+
             };
         </script>
         <script type="text/javascript" src="js/Chart.min.js"></script>
