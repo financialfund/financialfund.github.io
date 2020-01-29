@@ -102,13 +102,13 @@
 		      <th scope="col">Risk</th>
 		      
 		      <th scope="col">Entry</th>
-		      <th scope="col">Value</th>
+		      <th scope="col">Current</th>
 		      <th scope="col">Units</th>
 		      <th scope="col">P/L</th>
 		      <th scope="col">P/L(%)</th>
-		      <th scope="col">Commission</th>
+		      <th scope="col">Bonus</th>
 		      <th scope="col">Invested</th>
-		      <th scope="col">Current</th>
+		      <th scope="col">Total</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -166,7 +166,7 @@
 		  			else{
 		  				document.write("<td style='color: red'>");
 		  			}
-		  			document.write(formatNumber(Math.abs(profit).toFixed(2))+"</td>");
+		  			document.write(formatNumber(Math.abs(profit))+"</td>");
 
 		  			if (percent>0) {
 		  				document.write("<td style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
@@ -178,7 +178,7 @@
 
 		  			document.write("<td>"+formatNumber(bonus.toFixed(2))+"</td>");
 
-		  			document.write("<td>"+formatNumber(Invested.toFixed(2))+"</td>");
+		  			document.write("<td>"+formatNumber(Invested)+"</td>");
 		  			document.write("<td>"+formatNumber(total.toFixed(2))+"</td>");
 
 		  			document.write("</tr>");
@@ -203,7 +203,7 @@
 		  				document.write("<th style='color: red'>");
 		  				$("#pl").html("<span style='color: red'>"+formatNumber((Math.abs(_profit)+_bonus).toFixed(2))+"</span>");
 		  			}
-		    		document.write(formatNumber(Math.abs(_profit).toFixed(2))+"</th>");
+		    		document.write(formatNumber(Math.abs(_profit))+"</th>");
 		    		
 		    		if (gain>0) {
 		  				document.write("<th style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
@@ -215,7 +215,7 @@
 		  			}
 		    		document.write(Math.abs(gain)+"%</th>");
 		    		document.write("<th>"+formatNumber(_bonus.toFixed(2))+"</th>");
-		    		document.write("<th>"+formatNumber(_invested.toFixed(2))+"</th>");
+		    		document.write("<th>"+formatNumber(_invested)+"</th>");
 		    		document.write("<th>"+formatNumber(_total.toFixed(2))+"</th>");
 
 		    		$("#invested").text(formatNumber(_invested.toFixed(2)));
@@ -296,7 +296,7 @@ series.push(data);
 
 var options = {
     chart: {
-        height: 500,
+        height: 400,
         type: 'area',
         toolbar:{
             show: false,
@@ -322,6 +322,7 @@ var options = {
 	      return formatNumber(value);
 	    }
 	  },
+	  min: Math.min(...series[0]["data"])
 	},
     tooltip: {
     	inverseOrder: true,
