@@ -166,7 +166,7 @@
 		  			else{
 		  				document.write("<td style='color: red'>");
 		  			}
-		  			document.write(formatNumber(Math.abs(profit))+"</td>");
+		  			document.write(formatNumber(Math.abs(profit.toFixed(2)))+"</td>");
 
 		  			if (percent>0) {
 		  				document.write("<td style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
@@ -203,7 +203,7 @@
 		  				document.write("<th style='color: red'>");
 		  				$("#pl").html("<span style='color: red'>"+formatNumber((Math.abs(_profit)+_bonus).toFixed(2))+"</span>");
 		  			}
-		    		document.write(formatNumber(Math.abs(_profit))+"</th>");
+		    		document.write(formatNumber(Math.abs(_profit.toFixed(2)))+"</th>");
 		    		
 		    		if (gain>0) {
 		  				document.write("<th style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
