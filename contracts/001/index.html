@@ -2,7 +2,7 @@
 
 	var obj = {
 		"Fixed":{"Entry": 0, "Units": 0, "Date": "", "Bonus": 0},
-		"No Risk":{"Entry": 1022.23, "Units": 0, "Date": "October, 12 2019", "Bonus": 0},
+		"No Risk":{"Entry": 0, "Units": 0, "Date": "October, 12 2019", "Bonus": 0},
 		"Low Risk": {"Entry": 2000, "Units": 5000, "Date": "October, 12 2019", "Bonus": 21871.5},
 		"Medium Risk": {"Entry": 0, "Units": 0, "Date": "", "Bonus": 0},
 		"High Risk": {"Entry": 0, "Units": 0, "Date": "", "Bonus": 0}
@@ -160,7 +160,7 @@
 		  			document.write("<td>"+current+"</td>");
 		  			document.write("<td>"+formatNumber(units)+"</td>");
 
-		  			if (profit>0) {
+		  			if (profit>=0) {
 		  				document.write("<td style='color: #2ec551'>");
 		  			}
 		  			else{
@@ -168,7 +168,7 @@
 		  			}
 		  			document.write(formatNumber(Math.abs(profit.toFixed(2)))+"</td>");
 
-		  			if (percent>0) {
+		  			if (percent>=0) {
 		  				document.write("<td style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
 		  			}
 		  			else{
@@ -178,7 +178,7 @@
 
 		  			document.write("<td>"+formatNumber(bonus.toFixed(2))+"</td>");
 
-		  			document.write("<td>"+formatNumber(Invested)+"</td>");
+		  			document.write("<td>"+formatNumber(Invested.toFixed(2))+"</td>");
 		  			document.write("<td>"+formatNumber(total.toFixed(2))+"</td>");
 
 		  			document.write("</tr>");
@@ -195,7 +195,7 @@
 		    		var gaincommission = (((_current+_bonus)/_entry*100-100)).toFixed(2);
 		    		document.write("<th>"+formatNumber(_units)+"</th>");
 
-		    		if (profit>0) {
+		    		if (profit>=0) {
 		  				document.write("<th style='color: #2ec551'>");
 		  				$("#pl").html("<span style='color: #2ec551'>"+formatNumber((Math.abs(_profit)+_bonus).toFixed(2))+"</span>");
 		  			}
@@ -205,7 +205,7 @@
 		  			}
 		    		document.write(formatNumber(Math.abs(_profit.toFixed(2)))+"</th>");
 		    		
-		    		if (gain>0) {
+		    		if (gain>=0) {
 		  				document.write("<th style='color: #2ec551'> <i class='fa fa-fw fa-arrow-up'></i>");
 		  				$("#return").html("<span style='color: #2ec551'>"+Math.abs(gaincommission).toFixed(2)+"%</span>");
 		  			}
@@ -215,7 +215,7 @@
 		  			}
 		    		document.write(Math.abs(gain)+"%</th>");
 		    		document.write("<th>"+formatNumber(_bonus.toFixed(2))+"</th>");
-		    		document.write("<th>"+formatNumber(_invested)+"</th>");
+		    		document.write("<th>"+formatNumber(_invested.toFixed(2))+"</th>");
 		    		document.write("<th>"+formatNumber(_total.toFixed(2))+"</th>");
 
 		    		$("#invested").text(formatNumber(_invested.toFixed(2)));
