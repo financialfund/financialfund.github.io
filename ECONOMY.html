@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="js/Chart.min.js"></script>
+	<script type="text/javascript" src="js/chartjs-plugin-datalabels.min.js"></script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+
+<div>
+	<canvas id="mycanvas"></canvas>
+	<script type="text/javascript">
+			
+
+			Chart.helpers.merge(Chart.defaults.global.plugins.datalabels, {
+    color: '#000',
+    align: 'right',
+    anchor: 'end',
+    font:{
+    	size: 16
+    }
+});
+
+		new Chart(document.getElementById('mycanvas'), {
+    type: 'horizontalBar',
+    responsive: false,
+    data: {
+        labels: ["Philly Fed Manufacturing Index",
+        'Empire State Manufacturing Index',
+        'ISM Manufacturing PMI',
+        
+        'CB Consumer Confidence',
+        'Existing Home Sales',
+        "Durable Goods Orders m/m", 
+        'ISM Non-Manufacturing PMI',
+        'Advance GDP q/q',
+        'CB Leading Index m/m',
+        "CPI m/m",'Personal Income m/m',
+        'Industrial Production m/m',
+        'Trade Balance',
+        "Current Account",
+        "Non-Farm Employment Change"],
+        datasets: [
+        		{
+                    label: "USD",
+                    data: [
+                    359.45, 
+                    29.72,
+                    4.94, 
+                    
+                     2.65,
+                     2.02,
+                     1.2, 
+                     0.72, 
+                     0,
+                     0, 
+                     -0.1,
+                     -0.1,
+                     -0.3,
+                     -1.45,
+                     -1.64,
+                     -10.49],
+                    backgroundColor: "#8e5ea2",
+                    hoverBackgroundColor: "#8e5ea2",
+                    barPercentage: 0.95
+        		}
+        		
+        ]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+
+            }],
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                },
+            }]
+        },
+        tooltips: {
+            mode: "nearest",
+          },
+
+          
+        title: {
+                    display: true,
+                    fontSize: 48,
+                    text: 'Data',
+                    fontFamily: "'Helvetica', 'Arial', sans-serif",
+                    fontStyle: "normal",
+                    padding: 30
+                },
+        plugins: {
+            datalabels: {
+                formatter: function(value, context) {
+                    return value+"%";
+                }
+            }
+        }
+
+    }
+});
+	</script>
+</div>
+
+</body>
+</html>
