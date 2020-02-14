@@ -23,7 +23,7 @@
     1.07, 5.91, 3.85, 3.41,
     -2.48, 6.04, 6.26, -1.9, 3.47,
     5.72, 1.13, -1.01, 2.15,
-    2.89, -2.53];
+    2.89, -4.25];
     //2.89
 
     for(var i of incr){
@@ -44,7 +44,7 @@
 	var ninetyfive = [initial];
 	var fund = initial;
 	for (var i = 0; i < date.length-1; i++) {
-		var gain = ninetyfive[i]*incr[i]/100*0.057;
+		var gain = ninetyfive[i]*incr[i]/100*0.0575;
 		if(gain<0) gain =0;
 		fund += gain;
 		ninetyfive.push(fund.toFixed(2));
@@ -54,7 +54,7 @@
 	var ninety = [initial];
 	for (var i = 0; i < date.length-1; i++) {
 		// var gain = (overall[i+1]-overall[i])*0.082;
-        var gain = ninety[i]*incr[i]/100*0.097;
+        var gain = ninety[i]*incr[i]/100*0.1;
         if(gain<0) gain*=1.1;
 		fund += gain;
 		ninety.push(fund.toFixed(2));
@@ -74,7 +74,7 @@
 	var ultrarisk = [initial];
 	for (var i = 0; i < date.length-1; i++) {
 		// var gain = (overall[i+1]-overall[i])*0.24;
-        var gain = ultrarisk[i]*incr[i]/100*0.26;
+        var gain = ultrarisk[i]*incr[i]/100*0.275;
 		if(gain<0) gain*=3.1;
 		fund += gain;
 		ultrarisk.push(fund.toFixed(2));
