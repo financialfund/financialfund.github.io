@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<script type="text/javascript" src="js/Chart.min.js"></script>
 	<script type="text/javascript" src="js/chartjs-plugin-datalabels.min.js"></script>
 	<style type="text/css">
@@ -9,8 +10,8 @@
 	</style>
 </head>
 <body>
-
-<div>
+<div class="row">
+<div class="col-6">
 	<canvas id="mycanvas"></canvas>
 	<script type="text/javascript">
 			var data=[11.92, 14.96, 11.52, 8.11];
@@ -40,7 +41,6 @@
 
 		new Chart(document.getElementById('mycanvas'), {
     type: 'bar',
-    responsive: false,
     data: {
         labels: ['October',"November", "December", "January"],
         datasets: [
@@ -99,6 +99,73 @@
 });
 	</script>
 </div>
+
+<div class="col-6">
+    <canvas id="mycanvas1"></canvas>
+    <script type="text/javascript">
+
+        var date = ["02/19","02/20", "02/21"];
+        var data = [23.58,23.79, 21.88];
+
+        new Chart(document.getElementById('mycanvas1'), {
+    type: 'line',
+    data: {
+        labels: date,
+        datasets: [
+                {
+            label: "Market",
+            data: data,
+            backgroundColor: "#8e5ea2",
+                },
+        ]
+    },
+    options: {
+        
+        tooltips: {
+            mode: "nearest",
+          },
+          legend:{
+            display: false
+          },
+          scales: {
+
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    max: 100
+                },
+            }]
+        },
+
+          
+        title: {
+                    display: true,
+                    fontSize: 48,
+                    text: 'Portfolio Investment',
+                    fontFamily: "'Helvetica', 'Arial', sans-serif",
+                    fontStyle: "normal",
+                    padding: 30
+                },
+        plugins: {
+            enable: false,
+            datalabels: {
+                formatter: function(value, context) {
+                    return value+"%";
+                }
+                ,
+                display: false,
+            }
+        }
+
+    }
+});
+
+    </script>
+
+</div>
+
+</div>
+
 
 </body>
 </html>
