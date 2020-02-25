@@ -8,9 +8,22 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" type="text/css" href="css/spinkit.min.css">
         
-        <div class="overlay">
-        <div class="s">
-          <div class="sk-fold">
+        <div class="overlay" style="background-color:white;
+                  position:fixed;
+                  width:100%;
+                  height:100%;
+                  top:0px;
+                  left:0px;
+                  z-index:1000;">
+        <div class="s" style="width: 60px; height: 60px; display: inline-block;margin: 0;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+              background-color: white;">
+          <div class="sk-fold" style="width: 100%;
+              height: 100%;">
             <div class="sk-fold-cube"></div>
             <div class="sk-fold-cube"></div>
             <div class="sk-fold-cube"></div>
@@ -28,28 +41,6 @@
         <link rel="stylesheet" href="css/responsive.css">
         <style type="text/css">
 
-          .s{
-              width: 60px; height: 60px; display: inline-block;margin: 0;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              text-align: center;
-              background-color: white;
-            }
-            .sk-fold{
-              width: 100%;
-              height: 100%;
-            }
-              .overlay{
-                  background-color:white;
-                  position:fixed;
-                  width:100%;
-                  height:100%;
-                  top:0px;
-                  left:0px;
-                  z-index:1000;
-              }
           /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
           @media screen and (min-width: 601px) {
              .parallax h1{
