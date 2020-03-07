@@ -14,7 +14,7 @@
 <div class="col-lg-6 col-md-12">
 	<canvas id="mycanvas"></canvas>
 	<script type="text/javascript">
-			var data=[11.92, 14.96, 11.52, 8.11];
+			var data=[11.92, 14.96, 11.52, 8.11, -10.72];
 
 			var avg = [];
 
@@ -32,8 +32,8 @@
 
 			Chart.helpers.merge(Chart.defaults.global.plugins.datalabels, {
     color: '#000',
-    align: 'top',
-    anchor: 'end',
+    align: 'center',
+    anchor: 'center',
     font:{
     	size: 16
     }
@@ -42,7 +42,7 @@
 		new Chart(document.getElementById('mycanvas'), {
     type: 'bar',
     data: {
-        labels: ['October',"November", "December", "January"],
+        labels: ['October',"November", "December", "January", "February"],
         datasets: [
         		{
             label: "Average Return",
@@ -62,15 +62,11 @@
     },
     options: {
         scales: {
-            xAxes: [{
-                ticks: {
-                    beginAtZero: true
-                },
 
-            }],
             yAxes: [{
                 ticks: {
                     beginAtZero: true
+
                 },
             }]
         },
@@ -82,7 +78,7 @@
         title: {
                     display: true,
                     fontSize: 48,
-                    text: 'Monthly Average Return',
+                    text: 'Monthly Return',
                     fontFamily: "'Helvetica', 'Arial', sans-serif",
                     fontStyle: "normal",
                     padding: 30
@@ -104,8 +100,10 @@
     <canvas id="mycanvas1"></canvas>
     <script type="text/javascript">
 
-        var date = ["02/19","02/20", "02/21", "02/24", "02/25"];
-        var data = [23.58,23.79, 21.88, 20.24, 18.28];
+        var date = ["02/19","02/20", "02/21", "02/24", "02/25", "02/26", "02/27", "02/28", "03/02", "03/03"
+        , "03/04", "03/05", "03/06"];
+        var data = [23.58,23.79, 21.88, 20.24, 18.28, 16.1, 15.12, 15.68, 14.1, 17.54, 17.48,
+        17.675, 17.495];
 
         new Chart(document.getElementById('mycanvas1'), {
     type: 'line',
